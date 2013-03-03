@@ -1,6 +1,13 @@
 syntax: glob
 # NB: Neither glob nor regexp patterns in .hgignore are rooted. Glob and regexp patterns are rooted in the current directory in any context other than .hgignore.
 
+
+
+
+
+
+
+########################### rgkit/default.hgignore ###########################
 build/
 
 # ignore deployed gems (for testing rake CI build)
