@@ -13,8 +13,8 @@ extern NSString * const RunUntilSignalTimeoutException;
 
 @interface NSRunLoop (RunUntilSignal)
 
-- (void)runUntilSignal:(dispatch_semaphore_t)semaphore;
-- (void)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message;
-- (void)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message timeout:(CFAbsoluteTime)timeout;
+- (BOOL)runUntilSignal:(dispatch_semaphore_t)semaphore;
+- (BOOL)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message;
+- (BOOL)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message timeout:(CFAbsoluteTime)timeout;
 
 @end

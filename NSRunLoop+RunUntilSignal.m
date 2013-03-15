@@ -13,27 +13,29 @@
 const CFAbsoluteTime kRunUntilSignalDefaultTimeout = 5.0;
 NSString * const RunUntilSignalTimeoutException = @"RunUntilSignalTimeoutException";
 
-- (void)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message
+- (BOOL)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message
 {
-	[self runUntilSignal:semaphore message:message timeout:kRunUntilSignalDefaultTimeout];
+	return [self runUntilSignal:semaphore message:message timeout:kRunUntilSignalDefaultTimeout];
 }
 
-- (void)runUntilSignal:(dispatch_semaphore_t)semaphore
+- (BOOL)runUntilSignal:(dispatch_semaphore_t)semaphore
 {
-	[self runUntilSignal:semaphore message:nil timeout:kRunUntilSignalDefaultTimeout];
+	return [self runUntilSignal:semaphore message:nil timeout:kRunUntilSignalDefaultTimeout];
 }
 
-- (void)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message timeout:(CFAbsoluteTime)timeout
+- (BOOL)runUntilSignal:(dispatch_semaphore_t)semaphore message:(NSString *)message timeout:(CFAbsoluteTime)timeout
 {
 	CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
 	while (dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW)) {
 		[self runMode:NSDefaultRunLoopMode
 								 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
 		if( (CFAbsoluteTimeGetCurrent() - start) > timeout ) {
-            [NSException raise:RunUntilSignalTimeoutException format:@"Timeout expired: %@", message];
-            break;
+//            [NSException raise:RunUntilSignalTimeoutException format:@"Timeout expired: %@", message];
+            return NO;
         }
 	}
+    
+    return YES;
 }
 
 
