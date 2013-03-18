@@ -1,18 +1,17 @@
 syntax: glob
 # NB: Neither glob nor regexp patterns in .hgignore are rooted. Glob and regexp patterns are rooted in the current directory in any context other than .hgignore.
 
+
+
+
+
+
+
+########################### rgkit/default.hgignore ###########################
 build/
-Frank/frankified_build/
-Pods
-Frank/code-coverage/
-Frank/test-reports
 
 # ignore deployed gems (for testing rake CI build)
-vendor/
 .bundle/
-
-*.xcuserstate
-
 .svn/
 
 #####
@@ -35,11 +34,6 @@ vendor/
 # NB: slash on the end, so we only remove the FOLDER, not any files that were badly named "DerivedData"
 
 DerivedData/
-
-# NB: slash on the end, so we only remove the FOLDER, not any files that were badly named "build"
-
-# gcov
-Objects-normal/
 
 #####
 # Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)
