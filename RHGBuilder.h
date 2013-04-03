@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define BUILDER_METHOD(NAME, TYPE) - (instancetype)with ## NAME:(TYPE)dependency
+#define BUILDER_METHOD(NAME, TYPE) - (instancetype)with ## NAME:(TYPE)dependency; \
+                                    @property (readonly) TYPE ## NAME
 //
 // use in interface
 // generates 'with' style builder methods.
@@ -23,22 +24,22 @@
 
 // use in abstract method - (void)registerPropertiesAndDefaultValues
 #define BUILD_PROPERTY(NAME) [self addBuiltPropertyNamed:[NSString stringWithCString:#NAME encoding:NSUTF8StringEncoding]]
-#define DEFAULT(DEFAULT_OBJECT) [self setBuiltPropertyDefault:DEFAULT_OBJECT]
 
 // use in build implementation.
 #define CURRENT_VALUE(NAME) [self builtPropertyValueForKey:[NSString stringWithCString:#NAME encoding:NSUTF8StringEncoding]]
 
 @interface RHGBuilder : NSObject
 
-- (id)initWithMockery:(LRMockery *)context;
-@property (readonly) LRMockery *context;
+- (id)init;
+- (id)build;
 
-- (void)registerPropertiesAndDefaultValues; // template method
-- (id)build; // template method
+- (void)registerDefaultValues; // template method
+- (void)declareProperties; // template method
+- (id)buildObject; // template method
 
 // methods used by macros
 - (void)addBuiltPropertyNamed:(NSString *)propertyName;
-- (void)setBuiltPropertyDefault:(id)defaultObject;
+- (void)setDefault:(id)theDefaultObject forBuiltPropertyNamed:(NSString *)thePropertyName;
 - (id)handleBuilderSelector:(SEL)sel withObject:(id)dependency;
 - (id)builtPropertyValueForKey:(NSString *)key;
 
@@ -59,7 +60,10 @@
 
 @interface RHGMockeryObjectBuilder : RHGBuilder
 
-- (id)initWithMockery:(LRMockery *)context;
+- (id)initWithContext:(LRMockery *)context;
 @property (readonly) LRMockery *context;
 
+- (void)registerDefaultValues; // template method from superclass. you can use context here.
+
 @end
+

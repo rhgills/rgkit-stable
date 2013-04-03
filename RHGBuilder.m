@@ -7,6 +7,8 @@
 //
 
 #import "RHGBuilder.h"
+#import "RHGAbstractBuilderSubclassesOnly.h"
+
 #import <LRMocky.h>
 
 @implementation NSString (BuilderAdditions)
@@ -37,12 +39,68 @@
 @end
 
 
+static NSString * const RHGUnimplementedAbstractMethodException = @"RHGUnimplementedAbstractMethodException";
+#define ABSTRACT_METHOD [NSException raise:RHGUnimplementedAbstractMethodException format:@"Abstract method %@ must be implemented in a concrete subclass. Don't call super.", NSStringFromSelector(_cmd)];
+
+
+@interface RHGMockeryObjectBuilder ()
+
+- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext;
+
+@end
+
+
+
+
+
+@implementation RHGMockeryObjectBuilder
+
+@synthesize context = _context;
+
+- (id)init
+{
+    [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init, not %@.", [self class], NSStringFromSelector(_cmd)];
+    return nil;
+}
+
+- (id)initWithContext:(LRMockery *)context
+{
+    self = [super init];
+    if (!self) return nil;
+    
+    NSParameterAssert(context);
+    _context = context;
+    
+    return self;
+}
+
+- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext
+{
+    self = [super initWithKeyedProperties:theKeyedProperties];
+    if (!self) return nil;
+    
+    NSParameterAssert(theContext);
+    _context = theContext;
+    
+    return self;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [[[self class] alloc] initWithKeyedProperties:[self deepCopyProperties] context:self.context];
+}
+
+- (void)registerDefaultValues
+{
+    ABSTRACT_METHOD;
+}
+
+@end
+
 
 
 
 @interface RHGBuilder ()
-
-- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext;
 
 @property (readonly) NSMutableDictionary *keyedProperties;
 @property RHGBuilderProperty *currentProperty;
@@ -53,71 +111,73 @@
 @implementation RHGBuilder
 
 @synthesize keyedProperties = _keyedProperties;
-@synthesize context = _context;
 
 - (id)init
-{
-    [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init.", [self class]];
-    return nil;
-}
-
-- (id)initWithMockery:(LRMockery *)context
 {
     self = [super init];
     if (!self) return nil;
     
-    _keyedProperties = [NSMutableDictionary dictionary];
-    NSParameterAssert(context);
-    _context = context;
-    
-    [self registerPropertiesAndDefaultValues];
+    return [self initWithKeyedProperties:[NSMutableDictionary dictionary]];
     
     return self;
 }
 
-- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext
+- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties
 {
     self = [super init];
     if (!self) return nil;
     
     NSParameterAssert(theKeyedProperties);
-    NSParameterAssert(theContext);
-    
     _keyedProperties = theKeyedProperties;
-    _context = theContext;
+    [self declareProperties];
     
     return self;
 }
 
-static NSString * const RHGUnimplementedAbstractMethodException = @"RHGUnimplementedAbstractMethodException";
-#define ABSTRACT_METHOD [NSException raise:RHGUnimplementedAbstractMethodException format:@"Abstract method %@ must be implemented in a concrete subclass. Don't call super.", NSStringFromSelector(_cmd)];
-
-- (void)registerPropertiesAndDefaultValues
+- (void)declareProperties
 {
     ABSTRACT_METHOD
 }
 
+- (void)registerDefaultValues
+{
+    ABSTRACT_METHOD
+}
 
 - (void)addBuiltPropertyNamed:(NSString *)propertyName
 {
-    RHGBuilderProperty *aProperty = [[RHGBuilderProperty alloc] initWithName:propertyName];
-    [self.keyedProperties setObject:aProperty forKey:propertyName];
-    self.currentProperty = aProperty;
+    RHGBuilderProperty *property = [self.keyedProperties objectForKey:propertyName];
+    
+    if (!property) {
+        property = [[RHGBuilderProperty alloc] initWithName:propertyName];
+        [self.keyedProperties setObject:property forKey:propertyName];
+    }
+    
+    self.currentProperty = property;
 }
 
-- (void)setBuiltPropertyDefault:(id)defaultObject
+- (void)setDefault:(id)theDefaultObject forBuiltProperty:(RHGBuilderProperty *)theProperty
 {
-    [self.currentProperty setDefaultValue:defaultObject];
+    [theProperty setDefaultValue:theDefaultObject];
 }
 
-- (id)copyWithZone:(NSZone *)zone
+- (void)setDefault:(id)theDefaultObject forBuiltPropertyNamed:(NSString *)thePropertyName
+{
+    [self setDefault:theDefaultObject forBuiltProperty:[self builtPropertyNamed:thePropertyName]];
+}
+
+- (NSMutableDictionary *)deepCopyProperties
 {
     NSMutableDictionary *copiedProperties = [NSMutableDictionary dictionaryWithCapacity:self.keyedProperties.count];
     for (RHGBuilderProperty *aProperty in self.keyedProperties.allValues) {
         [copiedProperties setValue:[aProperty copy] forKey:aProperty.name];
     }
-    
-    RHGBuilder *copy = [[[self class] alloc] initWithKeyedProperties:copiedProperties context:self.context];
+    return copiedProperties;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    RHGBuilder *copy = [[[self class] alloc] initWithKeyedProperties:[self deepCopyProperties]];
     return copy;
 }
 
@@ -171,10 +231,15 @@ static NSString * const RHGUnimplementedAbstractMethodException = @"RHGUnimpleme
 
 - (id)build
 {
-    ABSTRACT_METHOD
-    return nil; // never reached
+    [self registerDefaultValues];
+    return [self buildObject];
 }
 
+- (id)buildObject
+{
+    ABSTRACT_METHOD;
+    return nil;
+}
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
