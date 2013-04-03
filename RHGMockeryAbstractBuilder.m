@@ -10,7 +10,7 @@
 #import "RHGAbstractBuilderSubclassesOnly.h"
 #import "RHGHelperMacros.h"
 
-@interface RHGMockeryObjectBuilder ()
+@interface RHGMockeryAbstractBuilder ()
 
 - (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext;
 
@@ -20,7 +20,7 @@
 
 
 
-@implementation RHGMockeryObjectBuilder
+@implementation RHGMockeryAbstractBuilder
 
 @synthesize context = _context;
 

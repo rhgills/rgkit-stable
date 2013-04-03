@@ -8,7 +8,7 @@
 
 #import "RHGAbstractBuilder.h"
 
-@interface RHGMockeryObjectBuilder : RHGAbstractBuilder
+@interface RHGMockeryAbstractBuilder : RHGAbstractBuilder
 
 - (id)initWithContext:(LRMockery *)context;
 @property (readonly) LRMockery *context;
