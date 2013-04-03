@@ -58,12 +58,4 @@
 @end
 
 
-@interface RHGMockeryObjectBuilder : RHGBuilder
-
-- (id)initWithContext:(LRMockery *)context;
-@property (readonly) LRMockery *context;
-
-- (void)registerDefaultValues; // template method from superclass. you can use context here.
-
-@end
 

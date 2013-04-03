@@ -8,6 +8,7 @@
 
 #import "RHGBuilder.h"
 #import "RHGAbstractBuilderSubclassesOnly.h"
+#import "RGHelperMacros.h"
 
 #import <LRMocky.h>
 
@@ -39,63 +40,8 @@
 @end
 
 
-static NSString * const RHGUnimplementedAbstractMethodException = @"RHGUnimplementedAbstractMethodException";
-#define ABSTRACT_METHOD [NSException raise:RHGUnimplementedAbstractMethodException format:@"Abstract method %@ must be implemented in a concrete subclass. Don't call super.", NSStringFromSelector(_cmd)];
 
 
-@interface RHGMockeryObjectBuilder ()
-
-- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext;
-
-@end
-
-
-
-
-
-@implementation RHGMockeryObjectBuilder
-
-@synthesize context = _context;
-
-- (id)init
-{
-    [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init, not %@.", [self class], NSStringFromSelector(_cmd)];
-    return nil;
-}
-
-- (id)initWithContext:(LRMockery *)context
-{
-    self = [super init];
-    if (!self) return nil;
-    
-    NSParameterAssert(context);
-    _context = context;
-    
-    return self;
-}
-
-- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext
-{
-    self = [super initWithKeyedProperties:theKeyedProperties];
-    if (!self) return nil;
-    
-    NSParameterAssert(theContext);
-    _context = theContext;
-    
-    return self;
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    return [[[self class] alloc] initWithKeyedProperties:[self deepCopyProperties] context:self.context];
-}
-
-- (void)registerDefaultValues
-{
-    ABSTRACT_METHOD;
-}
-
-@end
 
 
 
