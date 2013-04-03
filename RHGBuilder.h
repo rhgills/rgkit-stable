@@ -30,6 +30,9 @@
 
 @interface RHGBuilder : NSObject
 
+- (id)initWithMockery:(LRMockery *)context;
+@property (readonly) LRMockery *context;
+
 - (void)registerPropertiesAndDefaultValues; // template method
 - (id)build; // template method
 
@@ -50,5 +53,13 @@
 @property (readonly) NSString *name;
 @property id defaultValue;
 @property id currentValue;
+
+@end
+
+
+@interface RHGMockeryObjectBuilder : RHGBuilder
+
+- (id)initWithMockery:(LRMockery *)context;
+@property (readonly) LRMockery *context;
 
 @end

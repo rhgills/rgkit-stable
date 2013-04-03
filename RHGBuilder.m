@@ -7,6 +7,7 @@
 //
 
 #import "RHGBuilder.h"
+#import <LRMocky.h>
 
 @implementation NSString (BuilderAdditions)
 
@@ -41,9 +42,7 @@
 
 @interface RHGBuilder ()
 
-- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties;
-
-
+- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext;
 
 @property (readonly) NSMutableDictionary *keyedProperties;
 @property RHGBuilderProperty *currentProperty;
@@ -51,28 +50,41 @@
 @end
 
 
-
 @implementation RHGBuilder
 
 @synthesize keyedProperties = _keyedProperties;
+@synthesize context = _context;
 
 - (id)init
+{
+    [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init.", [self class]];
+    return nil;
+}
+
+- (id)initWithMockery:(LRMockery *)context
 {
     self = [super init];
     if (!self) return nil;
     
     _keyedProperties = [NSMutableDictionary dictionary];
+    NSParameterAssert(context);
+    _context = context;
+    
     [self registerPropertiesAndDefaultValues];
     
     return self;
 }
 
-- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties
+- (id)initWithKeyedProperties:(NSMutableDictionary *)theKeyedProperties context:(LRMockery *)theContext
 {
     self = [super init];
     if (!self) return nil;
     
+    NSParameterAssert(theKeyedProperties);
+    NSParameterAssert(theContext);
+    
     _keyedProperties = theKeyedProperties;
+    _context = theContext;
     
     return self;
 }
@@ -105,7 +117,7 @@ static NSString * const RHGUnimplementedAbstractMethodException = @"RHGUnimpleme
         [copiedProperties setValue:[aProperty copy] forKey:aProperty.name];
     }
     
-    RHGBuilder *copy = [[[self class] alloc] initWithKeyedProperties:copiedProperties];
+    RHGBuilder *copy = [[[self class] alloc] initWithKeyedProperties:copiedProperties context:self.context];
     return copy;
 }
 
@@ -150,7 +162,7 @@ static NSString * const RHGUnimplementedAbstractMethodException = @"RHGUnimpleme
     id setValue = property.currentValue;
     if (!setValue) {
         id defaultValue = property.defaultValue;
-        NSParameterAssert(defaultValue);
+        NSAssert(defaultValue, @"property %@ must have a default value.", key);
         return defaultValue;
     }
     
