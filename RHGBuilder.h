@@ -8,23 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define BUILDER_METHOD(NAME, TYPE) - (instancetype)with ## NAME:(TYPE)dependency; \
-                                    @property (readonly) TYPE ## NAME
-//
-// use in interface
-// generates 'with' style builder methods.
-//
-// For example:
-//
-// BUILDER_METHOD(Application, NSApplication *);
-//
-// generates:
-//
-// - (instancetype)withApplication:(NSApplication *)obj;
-
-// use in abstract method - (void)registerPropertiesAndDefaultValues
-#define BUILD_PROPERTY(NAME) [self addBuiltPropertyNamed:[NSString stringWithCString:#NAME encoding:NSUTF8StringEncoding]]
-
 // use in build implementation.
 #define CURRENT_VALUE(NAME) [self builtPropertyValueForKey:[NSString stringWithCString:#NAME encoding:NSUTF8StringEncoding]]
 
@@ -37,10 +20,10 @@
 - (void)declareProperties; // template method
 - (id)buildObject; // template method
 
-// methods used by macros
 - (void)addBuiltPropertyNamed:(NSString *)propertyName;
 - (void)setDefault:(id)theDefaultObject forBuiltPropertyNamed:(NSString *)thePropertyName;
-- (id)handleBuilderSelector:(SEL)sel withObject:(id)dependency;
+
+// methods used by macros
 - (id)builtPropertyValueForKey:(NSString *)key;
 
 @end

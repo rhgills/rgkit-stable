@@ -8,7 +8,7 @@
 
 #import "RHGBuilder.h"
 #import "RHGAbstractBuilderSubclassesOnly.h"
-#import "RGHelperMacros.h"
+#import "RHGHelperMacros.h"
 
 #import <LRMocky.h>
 
