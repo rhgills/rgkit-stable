@@ -10,8 +10,6 @@
 #import "RHGAbstractBuilderSubclassesOnly.h"
 #import "RHGHelperMacros.h"
 
-#import <LRMocky.h>
-
 @implementation NSString (BuilderAdditions)
 
 - (NSString *)rhg_stringByRemovingPrefix:(NSString *)prefix

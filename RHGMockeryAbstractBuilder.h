@@ -7,6 +7,7 @@
 //
 
 #import "RHGAbstractBuilder.h"
+#import <LRMocky.h>
 
 @interface RHGMockeryAbstractBuilder : RHGAbstractBuilder
 
