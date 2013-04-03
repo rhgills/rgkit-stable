@@ -11,7 +11,7 @@
 // use in build implementation.
 #define CURRENT_VALUE(NAME) [self builtPropertyValueForKey:[NSString stringWithCString:#NAME encoding:NSUTF8StringEncoding]]
 
-@interface RHGBuilder : NSObject
+@interface RHGAbstractBuilder : NSObject
 
 - (id)init;
 - (id)build;

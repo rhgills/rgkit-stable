@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Robert. All rights reserved.
 //
 
-#import "RHGBuilder.h"
+#import "RHGAbstractBuilder.h"
 #import "RHGAbstractBuilderSubclassesOnly.h"
 #import "RHGHelperMacros.h"
 
@@ -46,7 +46,7 @@
 
 
 
-@interface RHGBuilder ()
+@interface RHGAbstractBuilder ()
 
 @property (readonly) NSMutableDictionary *keyedProperties;
 @property RHGBuilderProperty *currentProperty;
@@ -54,7 +54,7 @@
 @end
 
 
-@implementation RHGBuilder
+@implementation RHGAbstractBuilder
 
 @synthesize keyedProperties = _keyedProperties;
 
@@ -123,7 +123,7 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    RHGBuilder *copy = [[[self class] alloc] initWithKeyedProperties:[self deepCopyProperties]];
+    RHGAbstractBuilder *copy = [[[self class] alloc] initWithKeyedProperties:[self deepCopyProperties]];
     return copy;
 }
 
@@ -134,7 +134,7 @@
 
 - (id)setBuiltProperty:(NSString *)aPropertyName to:(id)anObject
 {
-    RHGBuilder *builder = [self copy];
+    RHGAbstractBuilder *builder = [self copy];
     RHGBuilderProperty *theProperty = [builder builtPropertyNamed:aPropertyName];
     NSParameterAssert(theProperty);
     

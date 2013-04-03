@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Robert Gilliam. All rights reserved.
 //
 
-#import "RHGBuilder.h"
+#import "RHGAbstractBuilder.h"
 
-@interface RHGMockeryObjectBuilder : RHGBuilder
+@interface RHGMockeryObjectBuilder : RHGAbstractBuilder
 
 - (id)initWithContext:(LRMockery *)context;
 @property (readonly) LRMockery *context;
