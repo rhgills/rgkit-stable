@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CurrentDateWrapper.h"
+#import "RHGCurrentDateWrapper.h"
 
-@interface RHGNSDateCurrentDateWrapper : NSObject <CurrentDateWrapper>
+@interface RHGNSDateCurrentDateWrapper : NSObject <RHGCurrentDateWrapper>
 
 + (RHGNSDateCurrentDateWrapper *)sharedInstance;
 

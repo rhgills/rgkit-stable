@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CurrentDateWrapper <NSObject>
+@protocol RHGCurrentDateWrapper <NSObject>
 
 - (NSDate *)currentDate;
 - (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour;
