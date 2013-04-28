@@ -21,7 +21,7 @@
 
 @interface RHGAbstractBuilder ()
 
-@property (readonly) NSMutableDictionary *keyedProperties;
+
 @property RHGBuilderProperty *currentProperty;
 
 @end
@@ -141,7 +141,7 @@
     id setValue = property.currentValue;
     if (!setValue) {
         id defaultValue = property.defaultValue;
-        NSAssert(defaultValue, @"property %@ must have a default value.", key);
+//        NSAssert(defaultValue, @"property %@ must have a default value.", key);
         return defaultValue;
     }
     

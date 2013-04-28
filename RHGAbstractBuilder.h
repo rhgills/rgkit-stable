@@ -26,6 +26,10 @@
 // methods used by macros
 - (id)builtPropertyValueForKey:(NSString *)key;
 
+// subclasses only
+- (id)setBuiltProperty:(NSString *)aPropertyName to:(id)anObject;
+@property (readonly) NSMutableDictionary *keyedProperties;
+
 @end
 
 
