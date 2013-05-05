@@ -32,13 +32,22 @@
         if ([keyValuePairArray count] < 2) continue; // Verify that there is at least one key, and at least one value.  Ignore extra = signs
         NSString *key = [[keyValuePairArray objectAtIndex:0] stringByDecodingURLFormat];
         NSString *value = [[keyValuePairArray objectAtIndex:1] stringByDecodingURLFormat];
-        NSMutableArray *results = [queryComponents objectForKey:key]; // URL spec says that multiple values are allowed per key
-        if(!results) // First object
-        {
-            results = [NSMutableArray arrayWithCapacity:1];
-            [queryComponents setObject:results forKey:key];
+                
+        id resultOrArrayOfResults = [queryComponents objectForKey:key]; // URL spec says that multiple values are allowed per key
+        if (!resultOrArrayOfResults) {
+            [queryComponents setObject:value forKey:key];
+        }else{
+            if ([resultOrArrayOfResults isKindOfClass:[NSString class]]) {
+                NSMutableArray *results = [NSMutableArray arrayWithCapacity:2];
+                [results addObject:resultOrArrayOfResults];
+                [results addObject:value];
+                [queryComponents setObject:results forKey:key];
+            }else{
+                // is already an array
+                NSMutableArray *results = (NSMutableArray *)resultOrArrayOfResults;
+                [results addObject:value];
+            }
         }
-        [results addObject:value];
     }
     return queryComponents;
 }
