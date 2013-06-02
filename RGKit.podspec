@@ -2,10 +2,10 @@ Pod::Spec.new do |s|
   s.name         = "RGKit"
   s.version      = "0.0.1"
   s.summary      = "Miscellaneous helpers."
-  s.homepage     = "https://rhgills.kilnhg.com/Code/RGKit"
+  s.homepage     = "https://github.com/rhgills/rgkit-stable"
   s.license      = 'MIT'
   s.author       = { "Robert Gilliam" => "robert@robertgilliam.org" }
-  s.source       = { :git => "https://rhgills.kilnhg.com/Code/RGKit/Group/rgkit-stable.git", :tag => 'v0.0.1' }
+  s.source       = { :git => "https://github.com/rhgills/rgkit-stable.git", :tag => 'v0.0.1' }
   s.platform = :ios, '6.1'
 
   s.source_files = 'Classes', 'Classes/**/*.{h,m}'
