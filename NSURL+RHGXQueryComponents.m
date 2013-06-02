@@ -6,6 +6,10 @@
 //  Copyright (c) 2013 Robert Gilliam. All rights reserved.
 //
 
+//
+// From: http://stackoverflow.com/questions/3997976/parse-nsurl-query-property.
+//
+
 #import "NSURL+RHGXQueryComponents.h"
 #import "NSString+RHGXQueryComponents.h"
 
