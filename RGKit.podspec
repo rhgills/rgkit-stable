@@ -6,7 +6,8 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Robert Gilliam" => "robert@robertgilliam.org" }
   s.source       = { :git => "https://github.com/rhgills/rgkit-stable.git", :tag => 'v0.0.2' }
-  s.platform = :ios, '5.0'
+  s.ios.deployment_target = '5.0'
+  s.osx.deployment_target = '10.7'
 
   s.source_files = 'Classes', 'Classes/**/*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
