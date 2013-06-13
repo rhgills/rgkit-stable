@@ -46,7 +46,7 @@
     self = [super init];
     if (!self) return nil;
     
-    NSParameterAssert(theKeyedProperties);
+    RHGAssert(theKeyedProperties);
     _keyedProperties = theKeyedProperties;
     [self declareProperties];
     
@@ -109,7 +109,7 @@
 {
     RHGAbstractBuilder *builder = [self copy];
     RHGBuilderProperty *theProperty = [builder builtPropertyNamed:aPropertyName];
-    NSParameterAssert(theProperty);
+    RHGAssert(theProperty);
     
     [theProperty setCurrentValue:anObject];
     return builder;
@@ -187,7 +187,7 @@
             [anInvocation getArgument:&theObject atIndex:2];
 
             id trampolinedBuilder = [self handleBuilderSelector:theSelector withObject:theObject];
-            NSParameterAssert(trampolinedBuilder);
+            RHGAssert(trampolinedBuilder);
             CFRetain((__bridge CFTypeRef)trampolinedBuilder); // this might leak. I don't know what goes on in setReturnValue, but it crashes when the autorelease pool is popped otherwise.
             [anInvocation setReturnValue:&trampolinedBuilder];
             return;

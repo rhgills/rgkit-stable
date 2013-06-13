@@ -35,7 +35,7 @@
     self = [super init];
     if (!self) return nil;
     
-    NSParameterAssert(context);
+    RHGAssert(context);
     _context = context;
     
     return self;
@@ -46,7 +46,7 @@
     self = [super initWithKeyedProperties:theKeyedProperties];
     if (!self) return nil;
     
-    NSParameterAssert(theContext);
+    RHGAssert(theContext);
     _context = theContext;
     
     return self;
