@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5C3CD51E-1489-439B-88C3-F1743F12B08D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RGKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6C35AD2C-CEDA-440C-A4B4-4C79B1699788</key>
+		<string>https://github.com/rhgills/rgkit-stable</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RGKit.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6C35AD2C-CEDA-440C-A4B4-4C79B1699788</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rhgills/rgkit-stable</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6C35AD2C-CEDA-440C-A4B4-4C79B1699788</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6C35AD2C-CEDA-440C-A4B4-4C79B1699788</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rgkit-stable</string>
+		</dict>
+	</array>
+</dict>
+</plist>

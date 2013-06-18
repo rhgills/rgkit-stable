@@ -6,8 +6,6 @@
 //
 //
 
-#import "RGKit/RHGXQueryComponents.h"
-
 #import "RGKit/IsFolderOrFile.h"
 #import "RGKit/NSRunLoop+RunUntilSignal.h"
 #import "RGKit/NSString+RHGPrefixAdditions.h"
@@ -19,3 +17,4 @@
 #import "RGKit/RHGMockeryAbstractBuilder.h"
 #import "RGKit/RHGNSDateCurrentDateWrapper.h"
 #import "RGKit/RHGPerformDelayedSelectorWrapper.h"
+#import "RGKit/RHGXQueryComponents.h"

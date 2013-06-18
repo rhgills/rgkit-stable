@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Classes"
+      name = "Classes">
+      <FileRef
+         location = "group:RGKit.h">
+      </FileRef>
+      <Group
+         location = "group:RGKit"
+         name = "RGKit">
+         <FileRef
+            location = "group:IsFolderOrFile.h">
+         </FileRef>
+         <FileRef
+            location = "group:IsFolderOrFile.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSRunLoop+RunUntilSignal.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSRunLoop+RunUntilSignal.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+RHGPrefixAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+RHGPrefixAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSURL+RHGExampleURL.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURL+RHGExampleURL.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLRequest+RHGExampleRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLRequest+RHGExampleRequest.m">
+         </FileRef>
+         <FileRef
+            location = "group:RHGAbstractBuilder.h">
+         </FileRef>
+         <FileRef
+            location = "group:RHGAbstractBuilder.m">
+         </FileRef>
+         <FileRef
+            location = "group:RHGAbstractBuilderSubclassesOnly.h">
+         </FileRef>
+         <FileRef
+            location = "group:RHGCurrentDateWrapper.h">
+         </FileRef>
+         <FileRef
+            location = "group:RHGHelperMacros.h">
+         </FileRef>
+         <FileRef
+            location = "group:RHGHelperMacros.m">
+         </FileRef>
+         <FileRef
+            location = "group:RHGMockeryAbstractBuilder.h">
+         </FileRef>
+         <FileRef
+            location = "group:RHGMockeryAbstractBuilder.m">
+         </FileRef>
+         <FileRef
+            location = "group:RHGNSDateCurrentDateWrapper.h">
+         </FileRef>
+         <FileRef
+            location = "group:RHGNSDateCurrentDateWrapper.m">
+         </FileRef>
+         <FileRef
+            location = "group:RHGPerformDelayedSelectorWrapper.h">
+         </FileRef>
+         <FileRef
+            location = "group:RHGPerformDelayedSelectorWrapper.m">
+         </FileRef>
+         <FileRef
+            location = "group:RHGXQueryComponents.h">
+         </FileRef>
+         <Group
+            location = "group:XQueryComponents"
+            name = "XQueryComponents">
+            <FileRef
+               location = "group:NSString+RHGXQueryComponents.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+RHGXQueryComponents.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSURL+RHGXQueryComponents.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSURL+RHGXQueryComponents.m">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:Tests/RGKit Tests.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Tests/Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
