@@ -17,3 +17,9 @@ extern const char *__crashreporter_info__;
             abort(); \
         } \
     } while(0)
+
+#if __has_attribute(objc_requires_super)
+#define RHG_REQUIRES_SUPER __attribute__((objc_requires_super))
+#else
+#define RHG_REQUIRES_SUPER
+#endif
