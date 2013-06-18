@@ -18,8 +18,11 @@ extern const char *__crashreporter_info__;
         } \
     } while(0)
 
+// remove when iOS 7 is released
+#ifndef NS_REQUIRES_SUPER
 #if __has_attribute(objc_requires_super)
-#define RHG_REQUIRES_SUPER __attribute__((objc_requires_super))
+#define NS_REQUIRES_SUPER __attribute__((objc_requires_super))
 #else
-#define RHG_REQUIRES_SUPER
+#define NS_REQUIRES_SUPER
+#endif
 #endif
