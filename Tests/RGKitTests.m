@@ -7,6 +7,7 @@
 //
 
 #import "RGKitTests.h"
+#import <RGKit.h>
 
 @implementation RGKit_TestsTests
 
