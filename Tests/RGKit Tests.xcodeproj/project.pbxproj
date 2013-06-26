@@ -11,6 +11,7 @@
 		4B0C4A751770F56800D38CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A551770F56700D38CCD /* UIKit.framework */; };
 		4B0C4A761770F56800D38CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A571770F56700D38CCD /* Foundation.framework */; };
 		4B4D620D1770F617002AD2A0 /* RGKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D620C1770F617002AD2A0 /* RGKitTests.m */; };
+		4BAFFF8D177B6ACE0098341C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A591770F56700D38CCD /* CoreGraphics.framework */; };
 		D7C861F3E99B419BA0D2625E /* libPods-iOS Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96123473966E441EA07B2E21 /* libPods-iOS Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BAFFF8D177B6ACE0098341C /* CoreGraphics.framework in Frameworks */,
 				4B0C4A741770F56700D38CCD /* SenTestingKit.framework in Frameworks */,
 				4B0C4A751770F56800D38CCD /* UIKit.framework in Frameworks */,
 				4B0C4A761770F56800D38CCD /* Foundation.framework in Frameworks */,

@@ -50,9 +50,6 @@
             location = "group:RHGAbstractBuilderSubclassesOnly.h">
          </FileRef>
          <FileRef
-            location = "group:RHGCurrentDateWrapper.h">
-         </FileRef>
-         <FileRef
             location = "group:RHGHelperMacros.h">
          </FileRef>
          <FileRef
@@ -63,12 +60,6 @@
          </FileRef>
          <FileRef
             location = "group:RHGMockeryAbstractBuilder.m">
-         </FileRef>
-         <FileRef
-            location = "group:RHGNSDateCurrentDateWrapper.h">
-         </FileRef>
-         <FileRef
-            location = "group:RHGNSDateCurrentDateWrapper.m">
          </FileRef>
          <FileRef
             location = "group:RHGPerformDelayedSelectorWrapper.h">
@@ -93,6 +84,52 @@
             </FileRef>
             <FileRef
                location = "group:NSURL+RHGXQueryComponents.m">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:RHGTime.h">
+         </FileRef>
+         <Group
+            location = "group:Time"
+            name = "Time">
+            <FileRef
+               location = "group:RHGClock.h">
+            </FileRef>
+            <FileRef
+               location = "group:RHGBlockCallScheduler.h">
+            </FileRef>
+            <FileRef
+               location = "group:RHGBlockCallSchedulerTimerImpl.h">
+            </FileRef>
+            <FileRef
+               location = "group:RHGBlockCallSchedulerTimerImpl.m">
+            </FileRef>
+            <FileRef
+               location = "group:/Users/rhgill/Code/rgkit-stable/Classes/RGKit/Time/RHGFakeBlockCallScheduler.h">
+            </FileRef>
+            <FileRef
+               location = "group:/Users/rhgill/Code/rgkit-stable/Classes/RGKit/Time/RHGFakeBlockCallScheduler.m">
+            </FileRef>
+            <FileRef
+               location = "group:RHGCurrentDateWrapper.h">
+            </FileRef>
+            <FileRef
+               location = "group:RHGNSDateCurrentDateWrapper.h">
+            </FileRef>
+            <FileRef
+               location = "group:RHGNSDateCurrentDateWrapper.m">
+            </FileRef>
+            <FileRef
+               location = "group:RHGFakeAutoadvancingCurrentDateWrapper.h">
+            </FileRef>
+            <FileRef
+               location = "group:RHGFakeAutoadvancingCurrentDateWrapper.m">
+            </FileRef>
+            <FileRef
+               location = "group:RHGFakeCurrentDateWrapper.h">
+            </FileRef>
+            <FileRef
+               location = "group:RHGFakeCurrentDateWrapper.m">
             </FileRef>
          </Group>
       </Group>
