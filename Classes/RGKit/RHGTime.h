@@ -11,6 +11,8 @@
 #import "Time/Clock/RHGClockImpl.h"
 #import "Time/Clock/RHGFakeFrozenClock.h"
 #import "Time/Clock/RHGFakeAutoadvancingClock.h"
+#import "Time/Clock/Timer Wrapper/RHGTimerWrapper.h"
+#import "Time/Clock/Timer Wrapper/RHGTimerWrapperDelegate.h"
 #import "Time/Clock/Timer Wrapper/RHGTimerWrapperNS.h"
 #import "Time/Clock/Block Call Scheduler/RHGBlockCallScheduler.h"
 #import "Time/Clock/Block Call Scheduler/RHGBlockCallSchedulerTimerImpl.h"
