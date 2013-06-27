@@ -27,17 +27,22 @@
 
 - (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour
 {
-    @throw @"Not yet implemented.";
+[NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }
 
 - (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval
 {
-    @throw @"NYI";
+[NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }
 
 - (NSTimeInterval)timeUntilDate:(NSDate *)date
 {
-    @throw @"NYI";
+    [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
+}
+
+- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate
+{
+    [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }
 
 @end

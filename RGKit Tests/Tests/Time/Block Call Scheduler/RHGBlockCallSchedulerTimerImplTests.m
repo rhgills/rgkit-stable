@@ -21,6 +21,7 @@
     RHGBlockCallSchedulerTimerImpl *scheduler;
 }
 
+// integration w/ NSDateCurrentDateWrapper
 - (void)testFires
 {
     __block BOOL fired = NO;
@@ -42,7 +43,7 @@
     STAssertTrue(fired, nil);
 }
 
-- (void)testFiresMockBetterIsolated
+- (void)testFiresMockBetterIsolatedDate
 {
     __block BOOL fired = NO;
     
@@ -54,31 +55,12 @@
     }];
     
     NSDate *twoSecondsFromNow = [NSDate dateWithTimeIntervalSince1970:2.0];
-    [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){2.0})] timeUntilDate:twoSecondsFromNow];
-    [[currentDateWrapper expect] callback:scheduler afterTimeInterval:2.0];
+    [[currentDateWrapper expect] callback:scheduler onDate:twoSecondsFromNow];
     [scheduler scheduleOnDate:twoSecondsFromNow];
     
     STAssertFalse(fired, nil);
     
-    [scheduler timeIntervalDidElapse:2.0];
-    
-    STAssertTrue(fired, nil);
-}
-
-- (void)testFiresIfDateAlreadyElapsed
-{
-    __block BOOL fired = NO;
-    
-    id currentDateWrapper = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapper)];
-    
-    scheduler = [[RHGBlockCallSchedulerTimerImpl alloc] initWithCurrentDateWrapper:currentDateWrapper];
-    [scheduler setBlock:^{
-        fired = YES;
-    }];
-    
-    NSDate *twoSecondsBeforeNow = [NSDate dateWithTimeIntervalSince1970:0.0];
-    [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){-2.0})] timeUntilDate:twoSecondsBeforeNow];
-    [scheduler scheduleOnDate:twoSecondsBeforeNow];
+    [scheduler dateReached:twoSecondsFromNow];
     
     STAssertTrue(fired, nil);
 }

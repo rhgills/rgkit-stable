@@ -33,7 +33,8 @@
     };
     
     [clock scheduleOnDate:[NSDate dateWithTimeIntervalSince1970:0]];
-    
+
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
     STAssertTrue(blockCalled, nil);
 }
 
@@ -47,7 +48,7 @@
     [clock scheduleOnDate:[NSDate dateWithTimeIntervalSince1970:1.0]];
     STAssertFalse(blockCalled, nil);
     
-    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1.0]];
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1.1]];
     STAssertTrue(blockCalled, nil);
 }
 

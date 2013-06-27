@@ -50,15 +50,20 @@
     return [date timeIntervalSinceDate:[self currentDate]];
 }
 
-- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval
+- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate
 {
-    NSMethodSignature *signature = [(id)delegate methodSignatureForSelector:@selector(timeIntervalDidElapse:)];
+    NSTimeInterval timeUntilDate = [self timeUntilDate:theDate];
+    if (timeUntilDate <= 0) {
+        [delegate dateReached:theDate];
+        return;
+    }
+    
+    NSMethodSignature *signature = [(id)delegate methodSignatureForSelector:@selector(dateReached:)];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setTarget:delegate];
-    [invocation setSelector:@selector(timeIntervalDidElapse:)];
-    [invocation setArgument:&theInterval atIndex:2];
-    
-    [NSTimer scheduledTimerWithTimeInterval:theInterval invocation:invocation repeats:NO];
+    [invocation setSelector:@selector(dateReached:)];
+    [invocation setArgument:&theDate atIndex:2];
+    [NSTimer scheduledTimerWithTimeInterval:timeUntilDate invocation:invocation repeats:NO];
 }
 
 @end

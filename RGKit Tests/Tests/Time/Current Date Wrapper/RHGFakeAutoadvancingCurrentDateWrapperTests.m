@@ -32,7 +32,7 @@
 
 - (void)testStartDateAdvances
 {
-    sleep(1);
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1.0]];
     
     STAssertEqualsWithAccuracy([[currentDateWrapper currentDate] timeIntervalSince1970], 1.0, .05, nil);
 }
@@ -49,13 +49,25 @@
     STAssertEqualsWithAccuracy([currentDateWrapper timeUntilDate:sixSecondsLater], 6.0, .05, nil);
 }
 
-- (void)testCallsBackAfterInterval
+- (void)testCallsBackOnDate
 {
     id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapperDelegate)];
-    [currentDateWrapper callback:delegate afterTimeInterval:0.1];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:0.1];
+    [currentDateWrapper callback:delegate onDate:date];
     
-    [[delegate expect]  timeIntervalDidElapse:0.1];
+    [[delegate expect] dateReached:date];
     
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+}
+
+- (void)testCallsBackImmediatelyIfDateElapsed
+{
+    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapperDelegate)];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:-5.0];
+    
+    [[delegate expect] dateReached:date];
+    
+    [currentDateWrapper callback:delegate onDate:date];
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
 }
 

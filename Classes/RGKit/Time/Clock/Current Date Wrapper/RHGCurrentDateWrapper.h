@@ -11,7 +11,8 @@
 
 @protocol RHGCurrentDateWrapperDelegate <NSObject>
 
-- (void)timeIntervalDidElapse:(NSTimeInterval)theInterval;
+@optional
+- (void)dateReached:(NSDate *)theDate;
 
 @end
 
@@ -23,6 +24,9 @@
 - (NSDate *)currentDate;
 - (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour;
 - (NSTimeInterval)timeUntilDate:(NSDate *)date;
-- (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval;
+//- (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval;
+
+@optional
+- (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate;
 
 @end
