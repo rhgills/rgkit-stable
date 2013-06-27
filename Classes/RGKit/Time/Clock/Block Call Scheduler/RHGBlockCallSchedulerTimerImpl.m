@@ -54,11 +54,6 @@ static int ddLogLevel = LOG_LEVEL_WARN;
     [self callScheduledBlock];
 }
 
-- (void)timeIntervalDidElapse:(NSTimeInterval)theInterval
-{
-    [self callScheduledBlock];
-}
-
 - (void)callScheduledBlock
 {
     if ([self block]) {
