@@ -47,12 +47,6 @@ static int ddLogLevel = LOG_LEVEL_WARN;
     RHGAssert([self block], @"set the block before scheduling");
     
     [[self currentDateWrapper] callback:self onDate:theDate];
-//    NSTimeInterval timeUntilDate = [[self currentDateWrapper] timeUntilDate:theDate];
-//    if (timeUntilDate <= 0.0) {
-//        [self callScheduledBlock];
-//        return;
-//    }
-//    [[self currentDateWrapper] callback:self afterTimeInterval:timeUntilDate];
 }
 
 - (void)dateReached:(NSDate *)theDate
