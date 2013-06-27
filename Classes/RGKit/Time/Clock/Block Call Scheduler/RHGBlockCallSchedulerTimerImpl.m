@@ -16,8 +16,6 @@ static int ddLogLevel = LOG_LEVEL_WARN;
 
 @interface RHGBlockCallSchedulerTimerImpl ()
 
-- (void)timerFired:(NSTimer *)theTimer;
-
 @property (readonly) id <RHGCurrentDateWrapper> currentDateWrapper;
 
 @end

@@ -30,4 +30,14 @@
     @throw @"Not yet implemented.";
 }
 
+- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval
+{
+    @throw @"NYI";
+}
+
+- (NSTimeInterval)timeUntilDate:(NSDate *)date
+{
+    @throw @"NYI";
+}
+
 @end

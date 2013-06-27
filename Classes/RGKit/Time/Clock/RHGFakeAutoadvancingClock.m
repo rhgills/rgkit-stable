@@ -70,4 +70,9 @@
     return [[self blockCallScheduler] block];
 }
 
+- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval
+{
+    [[self currentDateWrapper] callback:delegate afterTimeInterval:theInterval];
+}
+
 @end
