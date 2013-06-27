@@ -13,6 +13,7 @@
 		4B5E090F177C8D8F0073D4E1 /* RHGBlockCallSchedulerTimerImplTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E090D177C8D8F0073D4E1 /* RHGBlockCallSchedulerTimerImplTests.m */; };
 		4B5E0912177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E0911177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m */; };
 		4B5E0915177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E0914177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m */; };
+		4B5E0918177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */; };
 		4BAFFF8D177B6ACE0098341C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A591770F56700D38CCD /* CoreGraphics.framework */; };
 		4BAFFF93177B6F420098341C /* RHGClockImplTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF92177B6F420098341C /* RHGClockImplTests.m */; };
 		4BAFFF97177B70340098341C /* RHGAutoverifyingSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */; };
@@ -30,6 +31,7 @@
 		4B5E0910177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHGFakeAutoadvancingCurrentDateWrapperTests.h; sourceTree = "<group>"; };
 		4B5E0911177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGFakeAutoadvancingCurrentDateWrapperTests.m; sourceTree = "<group>"; };
 		4B5E0914177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGFakeAutoadvancingClockTests.m; sourceTree = "<group>"; };
+		4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGNSDateCurrentDateWrapperTests.m; sourceTree = "<group>"; };
 		4BAFFF92177B6F420098341C /* RHGClockImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGClockImplTests.m; sourceTree = "<group>"; };
 		4BAFFF95177B70340098341C /* RHGAutoverifyingSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHGAutoverifyingSenTestCase.h; sourceTree = "<group>"; };
 		4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGAutoverifyingSenTestCase.m; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				4B5E0910177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.h */,
 				4B5E0911177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m */,
+				4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */,
 			);
 			path = "Current Date Wrapper";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				4B5E090F177C8D8F0073D4E1 /* RHGBlockCallSchedulerTimerImplTests.m in Sources */,
 				4B5E0912177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m in Sources */,
 				4B5E0915177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m in Sources */,
+				4B5E0918177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

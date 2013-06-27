@@ -7,6 +7,7 @@
 //
 
 #import "RHGAutoverifyingSenTestCase.h"
+#import <OCMock.h>
 
 @interface RHGBlockCallSchedulerTimerImplTests : RHGAutoverifyingSenTestCase
 
@@ -42,30 +43,45 @@
     STAssertTrue(fired, nil);
 }
 
-//- (void)testBlockCalledIfTimeAlreadyPassed
-//{
-//    __block BOOL blockCalled = NO;
-//    clock.block = ^{
-//        blockCalled = YES;
-//    };
-//    
-//    [clock scheduleOnDate:[NSDate dateWithTimeIntervalSince1970:0]];
-//    
-//    STAssertTrue(blockCalled, nil);
-//}
-//
-//- (void)testBlockCalledWhenScheduledDateArrives
-//{
-//    __block BOOL blockCalled = NO;
-//    clock.block = ^{
-//        blockCalled = YES;
-//    };
-//    
-//    [clock scheduleOnDate:[NSDate dateWithTimeIntervalSince1970:1.0]];
-//    STAssertFalse(blockCalled, nil);
-//    
-//    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSince1970:1.1]];
-//    STAssertTrue(blockCalled, nil);
-//}
+- (void)testFiresMockBetterIsolated
+{
+    __block BOOL fired = NO;
+    
+    id currentDateWrapper = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapper)];
+    
+    scheduler = [[RHGBlockCallSchedulerTimerImpl alloc] initWithCurrentDateWrapper:currentDateWrapper];
+    [scheduler setBlock:^{
+        fired = YES;
+    }];
+    
+    NSDate *twoSecondsFromNow = [NSDate dateWithTimeIntervalSince1970:2.0];
+    [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){2.0})] timeUntilDate:twoSecondsFromNow];
+    [[currentDateWrapper expect] callback:scheduler afterTimeInterval:2.0];
+    [scheduler scheduleOnDate:twoSecondsFromNow];
+    
+    STAssertFalse(fired, nil);
+    
+    [scheduler timeIntervalDidElapse:2.0];
+    
+    STAssertTrue(fired, nil);
+}
+
+- (void)testFiresIfDateAlreadyElapsed
+{
+    __block BOOL fired = NO;
+    
+    id currentDateWrapper = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapper)];
+    
+    scheduler = [[RHGBlockCallSchedulerTimerImpl alloc] initWithCurrentDateWrapper:currentDateWrapper];
+    [scheduler setBlock:^{
+        fired = YES;
+    }];
+    
+    NSDate *twoSecondsBeforeNow = [NSDate dateWithTimeIntervalSince1970:0.0];
+    [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){-2.0})] timeUntilDate:twoSecondsBeforeNow];
+    [scheduler scheduleOnDate:twoSecondsBeforeNow];
+    
+    STAssertTrue(fired, nil);
+}
 
 @end

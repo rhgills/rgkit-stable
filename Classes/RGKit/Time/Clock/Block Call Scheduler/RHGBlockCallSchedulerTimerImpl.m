@@ -53,11 +53,23 @@ static int ddLogLevel = LOG_LEVEL_WARN;
         [self callScheduledBlock];
         return;
     }
+    [[self currentDateWrapper] callback:self afterTimeInterval:timeUntilDate];
+    
+//    NSTimeInterval timeUntilDate = [[self currentDateWrapper] timeUntilDate:theDate];
+//    if (timeUntilDate <= 0.0) {
+//        [self callScheduledBlock];
+//        return;
+//    }
+//
+//    NSTimer *timer = [NSTimer timerWithTimeInterval:timeUntilDate target:self selector:@selector(timerFired:) userInfo:nil repeats:NO];
+//        
+//    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+//    NSLog(@"%@ scheduled to fire on date: %@", self, theDate);
+}
 
-    NSTimer *timer = [NSTimer timerWithTimeInterval:timeUntilDate target:self selector:@selector(timerFired:) userInfo:nil repeats:NO];
-        
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
-    NSLog(@"%@ scheduled to fire on date: %@", self, theDate);
+- (void)timeIntervalDidElapse:(NSTimeInterval)theInterval
+{
+    [self callScheduledBlock];
 }
 
 - (void)timerFired:(NSTimer *)theTimer
@@ -79,5 +91,6 @@ static int ddLogLevel = LOG_LEVEL_WARN;
         DDLogWarn(@"nil block when %@ fired.", self);
     }
 }
+
 
 @end

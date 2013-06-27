@@ -51,4 +51,15 @@
     return [date timeIntervalSinceDate:[self currentDate]];
 }
 
+- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval
+{
+    NSMethodSignature *signature = [(id)delegate methodSignatureForSelector:@selector(timeIntervalDidElapse:)];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    [invocation setTarget:delegate];
+    [invocation setSelector:@selector(timeIntervalDidElapse:)];
+    [invocation setArgument:&theInterval atIndex:2];
+    
+    [NSTimer scheduledTimerWithTimeInterval:theInterval invocation:invocation repeats:NO];
+}
+
 @end

@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+
+@protocol RHGCurrentDateWrapperDelegate <NSObject>
+
+- (void)timeIntervalDidElapse:(NSTimeInterval)theInterval;
+
+@end
+
+
+
+
 @protocol RHGCurrentDateWrapper <NSObject>
 
 - (NSDate *)currentDate;
@@ -15,5 +25,6 @@
 
 @optional // temp
 - (NSTimeInterval)timeUntilDate:(NSDate *)date;
+- (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval;
 
 @end

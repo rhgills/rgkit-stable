@@ -27,18 +27,5 @@
          landmarkName = "-testBlockCalledIfTimeAlreadyPassed"
          landmarkType = "5">
       </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallSchedulerTimerImpl.m"
-         timestampString = "394040455.859004"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "57"
-         endingLineNumber = "57"
-         landmarkName = "-scheduleOnDate:"
-         landmarkType = "5">
-      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

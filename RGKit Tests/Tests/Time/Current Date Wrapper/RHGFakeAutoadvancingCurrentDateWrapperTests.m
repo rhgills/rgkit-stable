@@ -8,6 +8,7 @@
 
 #import "RHGAutoverifyingSenTestCase.h"
 #import <RHGFakeAutoadvancingCurrentDateWrapper.h>
+#import <OCMock.h>
 
 @interface RHGFakeAutoadvancingCurrentDateWrapperTests : RHGAutoverifyingSenTestCase
 
@@ -47,6 +48,16 @@
     NSDate *sixSecondsLater = [NSDate dateWithTimeIntervalSince1970:6.0];
     
     STAssertEqualsWithAccuracy([currentDateWrapper timeUntilDate:sixSecondsLater], 6.0, .05, nil);
+}
+
+- (void)testCallsBackAfterInterval
+{
+    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapperDelegate)];
+    [currentDateWrapper callback:delegate afterTimeInterval:0.1];
+    
+    [[delegate expect]  timeIntervalDidElapse:0.1];
+    
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
 }
 
 @end
