@@ -70,7 +70,7 @@
     return [[self blockCallScheduler] block];
 }
 
-- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate
+- (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate
 {
     [[self currentDateWrapper] callback:delegate onDate:theDate];
 }

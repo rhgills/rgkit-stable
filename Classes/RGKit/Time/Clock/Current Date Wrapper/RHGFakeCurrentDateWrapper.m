@@ -30,7 +30,7 @@
 [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }
 
-- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval
+- (void)callback:(id<RHGTimerWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval
 {
 [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }
@@ -40,7 +40,7 @@
     [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }
 
-- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate
+- (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate
 {
     [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }

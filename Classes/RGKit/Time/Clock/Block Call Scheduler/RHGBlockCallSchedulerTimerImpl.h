@@ -11,7 +11,7 @@
 #import "RHGBlockCallScheduler.h"
 #import "RHGCurrentDateWrapper.h"
 
-@interface RHGBlockCallSchedulerTimerImpl : NSObject <RHGBlockCallScheduler, RHGCurrentDateWrapperDelegate>
+@interface RHGBlockCallSchedulerTimerImpl : NSObject <RHGBlockCallScheduler, RHGTimerWrapperDelegate>
 
 - (id)initWithCurrentDateWrapper:(id <RHGCurrentDateWrapper>)theCurrentDateWrapper;
 

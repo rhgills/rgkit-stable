@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RHGCurrentDateWrapper.h>
+#import <RHGTimerWrapperDelegate.h>
 
-@interface RHGTimerWrapper : NSObject
+@protocol RHGTimerWrapper <NSObject>
 
-- (id)initWithCurrentDateWrapper:(id <RHGCurrentDateWrapper>)theCurrentDateWrapper;
-
-- (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate;
+- (void)callback:(id <RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate;
 
 @end

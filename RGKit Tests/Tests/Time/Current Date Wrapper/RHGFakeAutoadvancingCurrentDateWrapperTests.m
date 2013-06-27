@@ -51,7 +51,7 @@
 
 - (void)testCallsBackOnDate
 {
-    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapperDelegate)];
+    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:0.1];
     [currentDateWrapper callback:delegate onDate:date];
     
@@ -62,7 +62,7 @@
 
 - (void)testCallsBackImmediatelyIfDateElapsed
 {
-    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapperDelegate)];
+    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:-5.0];
     
     [[delegate expect] dateReached:date];

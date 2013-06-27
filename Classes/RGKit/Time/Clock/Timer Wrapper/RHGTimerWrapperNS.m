@@ -6,16 +6,17 @@
 //
 //
 
-#import "RHGTimerWrapper.h"
+#import "RHGTimerWrapperNS.h"
+#import "RHGCurrentDateWrapper.h"
 
-@interface RHGTimerWrapper ()
+@interface RHGTimerWrapperNS ()
 
 @property (readonly) id <RHGCurrentDateWrapper> currentDateWrapper;
 
 @end
 
 
-@implementation RHGTimerWrapper
+@implementation RHGTimerWrapperNS
 
 - (id)init
 {
@@ -33,7 +34,7 @@
     return self;
 }
 
-- (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate;
+- (void)callback:(id <RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate;
 {
     NSTimeInterval timeUntilDate = [[self currentDateWrapper] timeUntilDate:theDate];
     if (timeUntilDate <= 0) {

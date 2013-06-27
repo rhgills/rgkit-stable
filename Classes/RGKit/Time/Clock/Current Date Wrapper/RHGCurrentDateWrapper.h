@@ -7,24 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RHGTimerWrapper.h>
 
-
-@protocol RHGCurrentDateWrapperDelegate <NSObject>
-
-@optional
-- (void)dateReached:(NSDate *)theDate;
-
-@end
-
-
-
-
-@protocol RHGCurrentDateWrapper <NSObject>
+@protocol RHGCurrentDateWrapper <RHGTimerWrapper, NSObject>
 
 - (NSDate *)currentDate;
 - (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour;
 - (NSTimeInterval)timeUntilDate:(NSDate *)date;
-- (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate;
-
 
 @end

@@ -111,7 +111,13 @@
                      location = "group:RHGTimerWrapper.h">
                   </FileRef>
                   <FileRef
-                     location = "group:RHGTimerWrapper.m">
+                     location = "group:RHGTimerWrapperDelegate.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:/Users/rhgill/Code/rgkit-stable/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperNS.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:/Users/rhgill/Code/rgkit-stable/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperNS.m">
                   </FileRef>
                </Group>
                <Group

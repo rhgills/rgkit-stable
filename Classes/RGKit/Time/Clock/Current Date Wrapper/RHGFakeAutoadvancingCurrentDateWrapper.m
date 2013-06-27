@@ -7,13 +7,13 @@
 //
 
 #import "RHGFakeAutoadvancingCurrentDateWrapper.h"
-#import "RHGTimerWrapper.h"
+#import "RHGTimerWrapperNS.h"
 
 @interface RHGFakeAutoadvancingCurrentDateWrapper ()
 
 @property (readonly) NSDate *fakeStartDate;
 @property (readonly) NSTimeInterval systemStartTimeInterval;
-@property (readonly) RHGTimerWrapper *timerWrapper;
+@property (readonly) RHGTimerWrapperNS *timerWrapper;
 
 @end
 
@@ -27,7 +27,7 @@
     
     _fakeStartDate = date;
     _systemStartTimeInterval = [NSDate timeIntervalSinceReferenceDate];
-    _timerWrapper = [[RHGTimerWrapper alloc] initWithCurrentDateWrapper:self];
+    _timerWrapper = [[RHGTimerWrapperNS alloc] initWithCurrentDateWrapper:self];
     
     return self;
 }
@@ -53,7 +53,7 @@
     return [date timeIntervalSinceDate:[self currentDate]];
 }
 
-- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate
+- (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate
 {
     [[self timerWrapper] callback:delegate onDate:theDate];
 }

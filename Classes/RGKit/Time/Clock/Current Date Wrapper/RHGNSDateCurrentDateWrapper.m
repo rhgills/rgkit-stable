@@ -7,11 +7,11 @@
 //
 
 #import "RHGNSDateCurrentDateWrapper.h"
-#import "RHGTimerWrapper.h"
+#import "RHGTimerWrapperNS.h"
 
 @interface RHGNSDateCurrentDateWrapper ()
 
-@property (readonly) RHGTimerWrapper *timerWrapper;
+@property (readonly) RHGTimerWrapperNS *timerWrapper;
 
 @end
 
@@ -34,7 +34,7 @@
     self = [super init];
     if (!self) return nil;
     
-    _timerWrapper = [[RHGTimerWrapper alloc] initWithCurrentDateWrapper:self];
+    _timerWrapper = [[RHGTimerWrapperNS alloc] initWithCurrentDateWrapper:self];
     
     return self;
 }
@@ -69,7 +69,7 @@
     return [date timeIntervalSinceDate:[self currentDate]];
 }
 
-- (void)callback:(id<RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate
+- (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate
 {
     [[self timerWrapper] callback:delegate onDate:theDate];
 }

@@ -7,7 +7,7 @@
 //
 
 #import "RHGAutoverifyingSenTestCase.h"
-#import <RHGTimerWrapper.h>
+#import <RHGTimerWrapperNS.h>
 #import <RHGCurrentDateWrapper.h> // temp
 #import <RHGNSDateCurrentDateWrapper.h>
 
@@ -17,7 +17,7 @@
 
 
 @implementation RHGTimerWrapperTests {
-    RHGTimerWrapper *timerWrapper;
+    RHGTimerWrapperNS *timerWrapper;
     
     id currentDateWrapper;
 }
@@ -27,7 +27,7 @@
     [super setUp];
     
     currentDateWrapper = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapper)];
-    timerWrapper = [[RHGTimerWrapper alloc] initWithCurrentDateWrapper:currentDateWrapper];
+    timerWrapper = [[RHGTimerWrapperNS alloc] initWithCurrentDateWrapper:currentDateWrapper];
 }
 
 //- (void)testCallsBackWhenTimerFires
@@ -50,7 +50,7 @@
 
 - (void)testCallsBackImmediatelyIfDateElapsed
 {
-    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapperDelegate)];
+    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
     NSDate *date = [NSDate date];
     [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){-0.1})] timeUntilDate:date];
     
