@@ -27,14 +27,15 @@
 		4B0C4A721770F56700D38CCD /* iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0C4A731770F56700D38CCD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4B4D62091770F5F5002AD2A0 /* RGKitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RGKitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		4B5E090D177C8D8F0073D4E1 /* RHGBlockCallSchedulerTimerImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGBlockCallSchedulerTimerImplTests.m; sourceTree = "<group>"; };
+		4B5E090D177C8D8F0073D4E1 /* RHGBlockCallSchedulerTimerImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGBlockCallSchedulerTimerImplTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4B5E0910177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHGFakeAutoadvancingCurrentDateWrapperTests.h; sourceTree = "<group>"; };
-		4B5E0911177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGFakeAutoadvancingCurrentDateWrapperTests.m; sourceTree = "<group>"; };
-		4B5E0914177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGFakeAutoadvancingClockTests.m; sourceTree = "<group>"; };
-		4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGNSDateCurrentDateWrapperTests.m; sourceTree = "<group>"; };
-		4BAFFF92177B6F420098341C /* RHGClockImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGClockImplTests.m; sourceTree = "<group>"; };
+		4B5E0911177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGFakeAutoadvancingCurrentDateWrapperTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4B5E0914177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGFakeAutoadvancingClockTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGNSDateCurrentDateWrapperTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4B5E0919177C9BE80073D4E1 /* RGKit Tests PCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "RGKit Tests PCH.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4BAFFF92177B6F420098341C /* RHGClockImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGClockImplTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4BAFFF95177B70340098341C /* RHGAutoverifyingSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHGAutoverifyingSenTestCase.h; sourceTree = "<group>"; };
-		4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGAutoverifyingSenTestCase.m; sourceTree = "<group>"; };
+		4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGAutoverifyingSenTestCase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		96123473966E441EA07B2E21 /* libPods-iOS Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7A9CD4ED724777B9442E06 /* Pods-iOS Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Tests.xcconfig"; path = "Pods/Pods-iOS Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -135,6 +136,7 @@
 		4BAFFF94177B70340098341C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4B5E0919177C9BE80073D4E1 /* RGKit Tests PCH.h */,
 				4BAFFF95177B70340098341C /* RHGAutoverifyingSenTestCase.h */,
 				4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */,
 			);
@@ -328,6 +330,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Helpers/RGKit Tests PCH.h";
 				INFOPLIST_FILE = "RGKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -343,6 +346,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Helpers/RGKit Tests PCH.h";
 				INFOPLIST_FILE = "RGKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;

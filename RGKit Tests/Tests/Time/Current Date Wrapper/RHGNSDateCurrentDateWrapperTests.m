@@ -6,9 +6,8 @@
 //  Copyright (c) 2013 Robert Gilliam. All rights reserved.
 //
 
-#import "RHGAutoverifyingSenTestCase.h"
+
 #import <RHGNSDateCurrentDateWrapper.h>
-#import <OCMock.h>
 
 @interface RHGNSDateCurrentDateWrapperTests : RHGAutoverifyingSenTestCase
 

@@ -6,13 +6,8 @@
 //  Copyright (c) 2013 Robert Gilliam. All rights reserved.
 //
 
-#import "RHGAutoverifyingSenTestCase.h"
+
 #import "RHGClockImpl.h"
-
-#define HC_SHORTHAND
-#import <OCHamcrest.h>
-
-#import <OCMock.h>
 
 @interface RHGClockImplTests : RHGAutoverifyingSenTestCase
 

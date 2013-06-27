@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Robert Gilliam. All rights reserved.
 //
 
-#import "RHGAutoverifyingSenTestCase.h"
-#import <OCMock.h>
+
 
 @interface RHGBlockCallSchedulerTimerImplTests : RHGAutoverifyingSenTestCase
 
