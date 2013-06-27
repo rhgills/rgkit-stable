@@ -4,9 +4,10 @@
    <Group
       location = "group:Classes"
       name = "Classes">
-      <FileRef
-         location = "group:RGKit.h">
-      </FileRef>
+      <Group
+         location = "group:Exclude"
+         name = "Exclude">
+      </Group>
       <Group
          location = "group:RGKit"
          name = "RGKit">
@@ -68,8 +69,87 @@
             location = "group:RHGPerformDelayedSelectorWrapper.m">
          </FileRef>
          <FileRef
+            location = "group:RHGUnitTestHelpers.h">
+         </FileRef>
+         <FileRef
             location = "group:RHGXQueryComponents.h">
          </FileRef>
+         <FileRef
+            location = "group:RHGTime.h">
+         </FileRef>
+         <Group
+            location = "group:Time"
+            name = "Time">
+            <Group
+               location = "group:Clock"
+               name = "Clock">
+               <FileRef
+                  location = "group:RHGClock.h">
+               </FileRef>
+               <FileRef
+                  location = "group:RHGClockImpl.h">
+               </FileRef>
+               <FileRef
+                  location = "group:RHGClockImpl.m">
+               </FileRef>
+               <FileRef
+                  location = "group:RHGFakeFrozenClock.h">
+               </FileRef>
+               <FileRef
+                  location = "group:RHGFakeFrozenClock.m">
+               </FileRef>
+               <FileRef
+                  location = "group:RHGFakeAutoadvancingClock.h">
+               </FileRef>
+               <FileRef
+                  location = "group:RHGFakeAutoadvancingClock.m">
+               </FileRef>
+               <Group
+                  location = "group:Block Call Scheduler"
+                  name = "Block Call Scheduler">
+                  <FileRef
+                     location = "group:RHGBlockCallScheduler.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGBlockCallSchedulerTimerImpl.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGBlockCallSchedulerTimerImpl.m">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGFakeBlockCallScheduler.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGFakeBlockCallScheduler.m">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Current Date Wrapper"
+                  name = "Current Date Wrapper">
+                  <FileRef
+                     location = "group:RHGCurrentDateWrapper.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGFakeAutoadvancingCurrentDateWrapper.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGFakeAutoadvancingCurrentDateWrapper.m">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGFakeCurrentDateWrapper.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGFakeCurrentDateWrapper.m">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGNSDateCurrentDateWrapper.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGNSDateCurrentDateWrapper.m">
+                  </FileRef>
+               </Group>
+            </Group>
+         </Group>
          <Group
             location = "group:XQueryComponents"
             name = "XQueryComponents">
@@ -86,58 +166,15 @@
                location = "group:NSURL+RHGXQueryComponents.m">
             </FileRef>
          </Group>
-         <FileRef
-            location = "group:RHGTime.h">
-         </FileRef>
-         <Group
-            location = "group:Time"
-            name = "Time">
-            <FileRef
-               location = "group:RHGClock.h">
-            </FileRef>
-            <FileRef
-               location = "group:RHGBlockCallScheduler.h">
-            </FileRef>
-            <FileRef
-               location = "group:RHGBlockCallSchedulerTimerImpl.h">
-            </FileRef>
-            <FileRef
-               location = "group:RHGBlockCallSchedulerTimerImpl.m">
-            </FileRef>
-            <FileRef
-               location = "group:/Users/rhgill/Code/rgkit-stable/Classes/RGKit/Time/RHGFakeBlockCallScheduler.h">
-            </FileRef>
-            <FileRef
-               location = "group:/Users/rhgill/Code/rgkit-stable/Classes/RGKit/Time/RHGFakeBlockCallScheduler.m">
-            </FileRef>
-            <FileRef
-               location = "group:RHGCurrentDateWrapper.h">
-            </FileRef>
-            <FileRef
-               location = "group:RHGNSDateCurrentDateWrapper.h">
-            </FileRef>
-            <FileRef
-               location = "group:RHGNSDateCurrentDateWrapper.m">
-            </FileRef>
-            <FileRef
-               location = "group:RHGFakeAutoadvancingCurrentDateWrapper.h">
-            </FileRef>
-            <FileRef
-               location = "group:RHGFakeAutoadvancingCurrentDateWrapper.m">
-            </FileRef>
-            <FileRef
-               location = "group:RHGFakeCurrentDateWrapper.h">
-            </FileRef>
-            <FileRef
-               location = "group:RHGFakeCurrentDateWrapper.m">
-            </FileRef>
-         </Group>
       </Group>
+      <FileRef
+         location = "group:RGKit.h">
+      </FileRef>
    </Group>
    <FileRef
-      location = "group:Tests/RGKit Tests.xcodeproj">
+      location = "group:RGKit Tests/RGKit Tests.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Tests/Pods/Pods.xcodeproj">
+      location = "group:RGKit Tests/Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
