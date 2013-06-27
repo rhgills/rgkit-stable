@@ -23,8 +23,9 @@
 - (NSDate *)currentDate;
 - (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour;
 
-@optional // temp
 - (NSTimeInterval)timeUntilDate:(NSDate *)date;
+
+@optional
 - (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate afterTimeInterval:(NSTimeInterval)theInterval;
 
 @end
