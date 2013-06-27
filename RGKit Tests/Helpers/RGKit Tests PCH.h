@@ -11,4 +11,5 @@
 #define HC_SHORTHAND
 #import <OCHamcrest.h>
 
+#import <RGKit.h>
 #import "RHGAutoverifyingSenTestCase.h"
