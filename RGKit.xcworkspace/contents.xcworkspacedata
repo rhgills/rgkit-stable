@@ -105,6 +105,16 @@
                   location = "group:RHGFakeAutoadvancingClock.m">
                </FileRef>
                <Group
+                  location = "group:Timer Wrapper"
+                  name = "Timer Wrapper">
+                  <FileRef
+                     location = "group:RHGTimerWrapper.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGTimerWrapper.m">
+                  </FileRef>
+               </Group>
+               <Group
                   location = "group:Block Call Scheduler"
                   name = "Block Call Scheduler">
                   <FileRef

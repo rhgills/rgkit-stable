@@ -14,6 +14,8 @@
 		4B5E0912177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E0911177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m */; };
 		4B5E0915177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E0914177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m */; };
 		4B5E0918177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */; };
+		4B5E091D177CA9010073D4E1 /* RHGTimerWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E091C177CA9010073D4E1 /* RHGTimerWrapperTests.m */; };
+		4B5E0920177CAA210073D4E1 /* RHGTimerWrapperIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E091F177CAA210073D4E1 /* RHGTimerWrapperIntegrationTests.m */; };
 		4BAFFF8D177B6ACE0098341C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A591770F56700D38CCD /* CoreGraphics.framework */; };
 		4BAFFF93177B6F420098341C /* RHGClockImplTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF92177B6F420098341C /* RHGClockImplTests.m */; };
 		4BAFFF97177B70340098341C /* RHGAutoverifyingSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */; };
@@ -33,6 +35,8 @@
 		4B5E0914177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGFakeAutoadvancingClockTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGNSDateCurrentDateWrapperTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4B5E0919177C9BE80073D4E1 /* RGKit Tests PCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "RGKit Tests PCH.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4B5E091C177CA9010073D4E1 /* RHGTimerWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGTimerWrapperTests.m; sourceTree = "<group>"; };
+		4B5E091F177CAA210073D4E1 /* RHGTimerWrapperIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGTimerWrapperIntegrationTests.m; sourceTree = "<group>"; };
 		4BAFFF92177B6F420098341C /* RHGClockImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGClockImplTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4BAFFF95177B70340098341C /* RHGAutoverifyingSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHGAutoverifyingSenTestCase.h; sourceTree = "<group>"; };
 		4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGAutoverifyingSenTestCase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -114,6 +118,15 @@
 			path = "Current Date Wrapper";
 			sourceTree = "<group>";
 		};
+		4B5E091A177CA8F40073D4E1 /* Timer Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				4B5E091F177CAA210073D4E1 /* RHGTimerWrapperIntegrationTests.m */,
+				4B5E091C177CA9010073D4E1 /* RHGTimerWrapperTests.m */,
+			);
+			path = "Timer Wrapper";
+			sourceTree = "<group>";
+		};
 		4BAFFF8F177B6F280098341C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 			children = (
 				4BAFFF92177B6F420098341C /* RHGClockImplTests.m */,
 				4B5E0914177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m */,
+				4B5E091A177CA8F40073D4E1 /* Timer Wrapper */,
 				4B5E090C177C8D8F0073D4E1 /* Block Call Scheduler */,
 				4B5E090E177C8D8F0073D4E1 /* Current Date Wrapper */,
 			);
@@ -257,6 +271,8 @@
 				4B5E0912177C8DD70073D4E1 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m in Sources */,
 				4B5E0915177C909A0073D4E1 /* RHGFakeAutoadvancingClockTests.m in Sources */,
 				4B5E0918177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m in Sources */,
+				4B5E091D177CA9010073D4E1 /* RHGTimerWrapperTests.m in Sources */,
+				4B5E0920177CAA210073D4E1 /* RHGTimerWrapperIntegrationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

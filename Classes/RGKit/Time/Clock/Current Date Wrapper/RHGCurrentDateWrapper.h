@@ -26,4 +26,5 @@
 - (NSTimeInterval)timeUntilDate:(NSDate *)date;
 - (void)callback:(id <RHGCurrentDateWrapperDelegate>)delegate onDate:(NSDate *)theDate;
 
+
 @end
