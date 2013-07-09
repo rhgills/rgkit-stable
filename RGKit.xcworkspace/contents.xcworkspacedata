@@ -146,6 +146,12 @@
                      location = "group:RHGCurrentDateWrapper.h">
                   </FileRef>
                   <FileRef
+                     location = "group:RHGCurrentDateWrapperFactory.h">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RHGCurrentDateWrapperFactory.m">
+                  </FileRef>
+                  <FileRef
                      location = "group:RHGFakeAutoadvancingCurrentDateWrapper.h">
                   </FileRef>
                   <FileRef
