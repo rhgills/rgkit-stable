@@ -11,14 +11,18 @@
 
 @implementation RHGCurrentDateWrapperFactory
 
+static id <RHGCurrentDateWrapper> sharedWrapper = nil;
 + (id <RHGCurrentDateWrapper>)sharedWrapper
 {
-    static id <RHGCurrentDateWrapper> sharedWrapper = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    if (!sharedWrapper) {
         sharedWrapper = [[RHGNSDateCurrentDateWrapper alloc] init];
-    });
+    };
     return sharedWrapper;
+}
+
++ (void)setSharedWrapper:(id<RHGCurrentDateWrapper>)theSharedWrapper
+{
+    sharedWrapper = theSharedWrapper;
 }
 
 @end

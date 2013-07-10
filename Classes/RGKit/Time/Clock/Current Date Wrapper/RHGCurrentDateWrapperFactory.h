@@ -13,4 +13,6 @@
 
 + (id <RHGCurrentDateWrapper>)sharedWrapper;
 
++ (void)setSharedWrapper:(id <RHGCurrentDateWrapper>)theSharedWrapper;
+
 @end
