@@ -18,6 +18,7 @@
 #import "Time/Clock/Block Call Scheduler/RHGBlockCallSchedulerTimerImpl.h"
 #import "Time/Clock/Block Call Scheduler/RHGFakeBlockCallScheduler.h"
 #import "Time/Clock/Current Date Wrapper/RHGCurrentDateWrapper.h"
+#import "Time/Clock/Current Date Wrapper/RHGCurrentDateWrapperFactory.h"
 #import "Time/Clock/Current Date Wrapper/RHGNSDateCurrentDateWrapper.h"
 #import "Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.h"
 #import "Time/Clock/Current Date Wrapper/RHGFakeAutoadvancingCurrentDateWrapper.h"
