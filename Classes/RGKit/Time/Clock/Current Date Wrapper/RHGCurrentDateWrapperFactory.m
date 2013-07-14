@@ -15,7 +15,7 @@ static id <RHGCurrentDateWrapper> sharedWrapper = nil;
 + (id <RHGCurrentDateWrapper>)sharedWrapper
 {
     if (!sharedWrapper) {
-        sharedWrapper = [[RHGNSDateCurrentDateWrapper alloc] init];
+        sharedWrapper = [self defaultWrapper];
     };
     return sharedWrapper;
 }
@@ -23,6 +23,11 @@ static id <RHGCurrentDateWrapper> sharedWrapper = nil;
 + (void)setSharedWrapper:(id<RHGCurrentDateWrapper>)theSharedWrapper
 {
     sharedWrapper = theSharedWrapper;
+}
+
++ (id <RHGCurrentDateWrapper>)defaultWrapper;
+{
+    return [[RHGNSDateCurrentDateWrapper alloc] init];
 }
 
 @end
