@@ -13,6 +13,7 @@
 
 @interface RHGTimerWrapperNS : NSObject <RHGTimerWrapper>
 
+// dependencies
 @property () id <RHGCurrentDateWrapper> currentDateWrapper;
 
 // for tests
