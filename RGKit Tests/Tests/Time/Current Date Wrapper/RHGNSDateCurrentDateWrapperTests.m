@@ -16,35 +16,31 @@
 
 @implementation RHGNSDateCurrentDateWrapperTests {
     RHGNSDateCurrentDateWrapper *currentDateWrapper;
+    id timerWrapper;
+    
+    NSDate *pastDate;
+    NSDate *futureDate;
 }
 
 - (void)setUp
 {
     [super setUp];
     
-    currentDateWrapper = [[RHGNSDateCurrentDateWrapper alloc] init];
+    timerWrapper = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapper)];
+    currentDateWrapper = [[RHGNSDateCurrentDateWrapper alloc] initWithTimerWrapper:timerWrapper];
+    
+    futureDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
+    pastDate = [NSDate dateWithTimeIntervalSinceNow:-0.1];
 }
 
-- (void)testCallsBackOnDate
+- (void)testPassesCallbackRequestsDownToTimerWrapper
 {
     id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
-    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0.1];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:1.0];
+    
+    [[timerWrapper expect] callback:delegate onDate:date];
+    
     [currentDateWrapper callback:delegate onDate:date];
-    
-    [[delegate expect] dateReached:date];
-    
-    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
-}
-
-- (void)testCallsBackImmediatelyIfDateElapsed
-{
-    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
-    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:-0.1];
-    
-    [[delegate expect] dateReached:date];
-    [currentDateWrapper callback:delegate onDate:date];
-    
-    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
 }
 
 @end

@@ -31,10 +31,18 @@
 
 - (id)init
 {
+    RHGTimerWrapperNS *tw = [[RHGTimerWrapperNS alloc] init];
+    self = [self initWithTimerWrapper:tw];
+    tw.currentDateWrapper = self;
+    return self;
+}
+
+- (id)initWithTimerWrapper:(RHGTimerWrapperNS *)theTimerWrapper
+{
     self = [super init];
     if (!self) return nil;
     
-    _timerWrapper = [[RHGTimerWrapperNS alloc] initWithCurrentDateWrapper:self];
+    _timerWrapper = theTimerWrapper;
     
     return self;
 }

@@ -27,7 +27,8 @@
     
     _fakeStartDate = date;
     _systemStartTimeInterval = [NSDate timeIntervalSinceReferenceDate];
-    _timerWrapper = [[RHGTimerWrapperNS alloc] initWithCurrentDateWrapper:self];
+    _timerWrapper = [[RHGTimerWrapperNS alloc] init];
+    _timerWrapper.currentDateWrapper = self;
     
     return self;
 }

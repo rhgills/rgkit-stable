@@ -9,12 +9,12 @@
 
 #import <RHGFakeAutoadvancingClock.h>
 
-@interface RHGFakeAutoadvancingClockTests : RHGAutoverifyingSenTestCase
+@interface RHGFakeAutoadvancingClockIntegrationTests : RHGAutoverifyingSenTestCase
 
 @end
 
 
-@implementation RHGFakeAutoadvancingClockTests {
+@implementation RHGFakeAutoadvancingClockIntegrationTests {
     RHGFakeAutoadvancingClock *clock;
 }
 

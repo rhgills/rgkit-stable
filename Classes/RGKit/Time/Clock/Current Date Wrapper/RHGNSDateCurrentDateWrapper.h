@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "RHGCurrentDateWrapper.h"
 
+@class RHGTimerWrapperNS;
+
 @interface RHGNSDateCurrentDateWrapper : NSObject <RHGCurrentDateWrapper>
 
 + (RHGNSDateCurrentDateWrapper *)sharedInstance;
+
+- (id)init;
+- (id)initWithTimerWrapper:(RHGTimerWrapperNS *)theTimerWrapper;
 
 @end

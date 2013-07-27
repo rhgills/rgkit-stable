@@ -20,6 +20,10 @@
     RHGTimerWrapperNS *timerWrapper;
     
     id currentDateWrapper;
+    id partial;
+    id delegate;
+    
+    NSDate *date;
 }
 
 - (void)setUp
@@ -27,35 +31,55 @@
     [super setUp];
     
     currentDateWrapper = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapper)];
-    timerWrapper = [[RHGTimerWrapperNS alloc] initWithCurrentDateWrapper:currentDateWrapper];
+    timerWrapper = [[RHGTimerWrapperNS alloc] init];
+    timerWrapper.currentDateWrapper = currentDateWrapper;
+    
+    partial = [self autoVerifiedPartialMockForObject:timerWrapper];
+    delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
+    
+    date = [NSDate dateWithTimeIntervalSince1970:0.0];
 }
-
-//- (void)testCallsBackWhenTimerFires
-//{
-//    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapperDelegate)];
-//    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0.1];
-//    [timerWrapper callback:delegate onDate:date];
-//    
-//    [[delegate expect] dateReached:date];
-//    
-//    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
-//}
-//
-//- (void)testSchedulesATimerToCallBack
-//{
-//    NSTimer *timer = [fakeRunLoop scheduledTimer];
-//    assertThat(timer, notNilValue());
-//    assertThat([timer fireDate], scheduledDate);
-//}
 
 - (void)testCallsBackImmediatelyIfDateElapsed
 {
-    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
-    NSDate *date = [NSDate date];
-    [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){-0.1})] timeUntilDate:date];
+    NSDate *pastDate = [NSDate dateWithTimeIntervalSince1970:0.0];
+    [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){-0.1})] timeUntilDate:pastDate];
     
-    [[delegate expect] dateReached:date];
-    [timerWrapper callback:delegate onDate:date];
+    [[delegate expect] dateReached:pastDate];
+    [timerWrapper callback:delegate onDate:pastDate];
+}
+
+- (void)testSchedulesACallbackIfDateInFuture
+{
+    NSDate *futureDate = [NSDate dateWithTimeIntervalSince1970:0.0];
+    [[[currentDateWrapper stub] andReturnValue:OCMOCK_VALUE((NSTimeInterval){0.1})] timeUntilDate:futureDate];
+    
+    [[partial expect] scheduleCallbackFor:delegate onDate:futureDate timeUntilDate:0.1];
+    
+    [timerWrapper callback:delegate onDate:futureDate];
+}
+
+- (void)testScheduledCallbackSchedulesUsingInvocation
+{
+    id invocation = @"";
+    NSTimeInterval timeUntil = 1.0;
+    
+    [[[partial expect] andReturn:invocation] invocationToCallback:delegate onDate:date];
+    [[partial expect] scheduleCallbackWithInvocation:invocation timeUntilDate:timeUntil];
+    
+    [timerWrapper scheduleCallbackFor:delegate onDate:date timeUntilDate:timeUntil];
+}
+
+- (void)testInvocationWillCallBackDelegateWhenFired
+{
+    NSInvocation *invocation = [timerWrapper invocationToCallback:delegate onDate:date];
+    
+    assertThat(invocation.target, sameInstance(delegate));
+    STAssertEquals(invocation.selector, @selector(dateReached:), nil);
+    
+    id dateArg;
+    [invocation getArgument:&dateArg atIndex:2];
+    assertThat(dateArg, equalTo(date));
 }
 
 @end

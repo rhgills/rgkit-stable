@@ -13,6 +13,11 @@
 
 @interface RHGTimerWrapperNS : NSObject <RHGTimerWrapper>
 
-- (id)initWithCurrentDateWrapper:(id <RHGCurrentDateWrapper>)theCurrentDateWrapper;
+@property () id <RHGCurrentDateWrapper> currentDateWrapper;
+
+// for tests
+- (void)scheduleCallbackFor:(id)delegate onDate:(NSDate *)theDate timeUntilDate:(NSTimeInterval)timeUntil;
+- (NSInvocation *)invocationToCallback:(id)delegate onDate:(NSDate *)theDate;
+- (void)scheduleCallbackWithInvocation:(NSInvocation *)invocation timeUntilDate:(NSTimeInterval)timeUntil;
 
 @end

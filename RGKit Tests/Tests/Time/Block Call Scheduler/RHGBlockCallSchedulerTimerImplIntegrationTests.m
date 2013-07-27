@@ -8,7 +8,7 @@
 
 
 
-@interface RHGBlockCallSchedulerTimerImplTests : RHGAutoverifyingSenTestCase
+@interface RHGBlockCallSchedulerTimerImplIntegrationTests : RHGAutoverifyingSenTestCase
 
 @end
 
@@ -17,7 +17,7 @@
 #import "RHGBlockCallSchedulerTimerImpl.h"
 #import <RHGNSDateCurrentDateWrapper.h>
 
-@implementation RHGBlockCallSchedulerTimerImplTests {
+@implementation RHGBlockCallSchedulerTimerImplIntegrationTests {
     RHGBlockCallSchedulerTimerImpl *scheduler;
 }
 

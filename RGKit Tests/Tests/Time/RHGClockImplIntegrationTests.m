@@ -9,13 +9,13 @@
 
 #import "RHGClockImpl.h"
 
-@interface RHGClockImplTests : RHGAutoverifyingSenTestCase
+@interface RHGClockImplIntegrationTests : RHGAutoverifyingSenTestCase
 
 @end
 
 
 
-@implementation RHGClockImplTests {
+@implementation RHGClockImplIntegrationTests {
     RHGClockImpl *clock;
 }
 
