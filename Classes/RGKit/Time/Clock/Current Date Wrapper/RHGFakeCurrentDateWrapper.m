@@ -7,17 +7,18 @@
 //
 
 #import "RHGFakeCurrentDateWrapper.h"
-
-@interface RHGFakeCurrentDateWrapper ()
-
-@property id <RHGTimerWrapperDelegate> waitingDelegate;
-@property NSDate *waitingDate;
-
-@end
+#import "DDLog.h"
 
 
 
-@implementation RHGFakeCurrentDateWrapper
+static int ddLogLevel = LOG_LEVEL_WARN;
+
+
+
+@implementation RHGFakeCurrentDateWrapper {
+    NSMutableArray *waitingDelegates;
+    NSMutableArray *waitingDates;
+}
 
 @synthesize frozenDate = _frozenDate;
 
@@ -33,6 +34,9 @@
     
     _frozenDate = theFrozenDate;
     
+    waitingDelegates = [NSMutableArray array];
+    waitingDates = [NSMutableArray array];
+    
     return self;
 }
 
@@ -40,7 +44,7 @@
 {
     _frozenDate = frozenDate;
     
-    [self notifyWaitingDelegateIfTargetDateReached];
+    [self notifyWaitingDelegatesIfTargetDateReached];
 }
 
 - (NSDate *)currentDate
@@ -50,7 +54,7 @@
 
 - (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour
 {
-[NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
+    [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
 }
 
 - (NSTimeInterval)timeUntilDate:(NSDate *)date
@@ -60,22 +64,47 @@
 
 - (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate
 {
-    self.waitingDelegate = delegate;
-    self.waitingDate = theDate;
-
-    [self notifyWaitingDelegateIfTargetDateReached];
+    [waitingDelegates addObject:delegate];
+    [waitingDates addObject:theDate];
+    
+    [self notifyWaitingDelegatesIfTargetDateReached];
 }
 
-- (void)notifyWaitingDelegateIfTargetDateReached
+- (void)notifyWaitingDelegatesIfTargetDateReached
 {
-    if (self.waitingDelegate) {
-        NSTimeInterval timeUntilDate = [self timeUntilDate:self.waitingDate];
-        if (timeUntilDate <= 0) {
-            [self.waitingDelegate dateReached:self.waitingDate];
-            self.waitingDelegate = nil;
-            self.waitingDate = nil;
-        }
+    NSMutableIndexSet *finishedIndices = [self finishedIndicesByRunningDelegatesPastTargetDate];
+    [self markDelegatesNoLongerWaiting:finishedIndices];
+}
+
+- (NSMutableIndexSet *)finishedIndicesByRunningDelegatesPastTargetDate
+{
+    NSMutableIndexSet *finishedIndices = [[NSMutableIndexSet alloc] init];
+    [waitingDelegates enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        id <RHGTimerWrapperDelegate> aWaitingDelegate = waitingDelegates[idx];
+        NSDate *aWaitingDate = waitingDates[idx];
+        
+        if ([self notifyWaitingDelegate:aWaitingDelegate ifDateReached:aWaitingDate])
+            [finishedIndices addIndex:idx];
+    }];
+    
+    return finishedIndices;
+}
+
+- (BOOL)notifyWaitingDelegate:(id)aWaitingDelegate ifDateReached:(NSDate *)aWaitingDate
+{
+    NSTimeInterval timeUntilDate = [self timeUntilDate:aWaitingDate];
+    if (timeUntilDate <= 0) {
+        [aWaitingDelegate dateReached:aWaitingDate];
+        return YES;
     }
+    
+    return NO;
+}
+
+- (void)markDelegatesNoLongerWaiting:(NSMutableIndexSet *)finishedIndices
+{
+    [waitingDelegates removeObjectsAtIndexes:finishedIndices];
+    [waitingDates removeObjectsAtIndexes:finishedIndices];
 }
 
 @end

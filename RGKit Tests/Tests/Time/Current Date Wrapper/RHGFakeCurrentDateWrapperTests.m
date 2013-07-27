@@ -17,16 +17,16 @@
 
 @implementation RHGFakeCurrentDateWrapperTests {
     RHGFakeCurrentDateWrapper *currentDateWrapper;
+    
+    NSDate *date;
 }
 
 - (void)setUp
 {
     [super setUp];
-}
-
-- (void)givenInit
-{
+    
     currentDateWrapper = [[RHGFakeCurrentDateWrapper alloc] init];
+    date = [NSDate dateWithTimeInterval:1.0 sinceDate:[currentDateWrapper currentDate]];
 }
 
 - (void)testDefaultsTo1970
@@ -45,8 +45,6 @@
 
 - (void)testCanChangeFrozenDateLater
 {
-    [self givenInit];
-    
     currentDateWrapper.frozenDate = [NSDate dateWithTimeIntervalSince1970:5.0];
     
     assertThat([currentDateWrapper frozenDate], equalTo([NSDate dateWithTimeIntervalSince1970:5.0]));
@@ -54,8 +52,6 @@
 
 - (void)testTimeUntilDate
 {
-    [self givenInit];
-    
     NSDate *targetDate = [NSDate dateWithTimeIntervalSince1970:5.0];
     NSTimeInterval timeUntil = [currentDateWrapper timeUntilDate:targetDate];
     
@@ -64,28 +60,47 @@
 
 - (void)testCallsDelegateWhenDateReached
 {
-    [self givenInit];
+    [self newDelegateExpectingCallback];
     
+    [currentDateWrapper setFrozenDate:date];
+}
+
+- (id)newDelegateExpectingCallback
+{
     id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
-    NSDate *targetDate = [NSDate dateWithTimeIntervalSince1970:5.0];
-    [currentDateWrapper callback:delegate onDate:targetDate];
+    [currentDateWrapper callback:delegate onDate:date];
+    [[delegate expect] dateReached:date];
     
-    [[delegate expect] dateReached:targetDate];
-    
-    [currentDateWrapper setFrozenDate:targetDate];
+    return delegate;
 }
 
 - (void)testCallsDelegateWhenDatePassed
 {
-    [self givenInit];
+    [self newDelegateExpectingCallback];
     
-    id delegate = [self autoVerifiedMockForProtocol:@protocol(RHGTimerWrapperDelegate)];
-    NSDate *targetDate = [NSDate dateWithTimeIntervalSince1970:5.0];
-    [currentDateWrapper callback:delegate onDate:targetDate];
-    
-    [[delegate expect] dateReached:targetDate];
-    
-    [currentDateWrapper setFrozenDate:[NSDate dateWithTimeInterval:60000.0 sinceDate:targetDate]];
+    [currentDateWrapper setFrozenDate:[NSDate dateWithTimeInterval:60000.0 sinceDate:date]];
 }
+
+- (void)testCallsBackMultipleDelegates
+{
+    [self newDelegateExpectingCallback];
+    [self newDelegateExpectingCallback];
+    
+    [currentDateWrapper setFrozenDate:date];
+}
+
+- (void)testDelegatesNotNotifiedTwice
+{
+    id d1 = [self newDelegateExpectingCallback];
+    id d2 = [self newDelegateExpectingCallback];
+    
+    [currentDateWrapper setFrozenDate:date];
+    
+    [d1 verify];
+    [d2 verify];
+    
+    [currentDateWrapper setFrozenDate:[NSDate dateWithTimeInterval:1.0 sinceDate:date]];
+}
+
 
 @end
