@@ -19,8 +19,6 @@
 
 @implementation RHGFakeFrozenClock
 
-@synthesize block;
-
 - (id)init
 {
     [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init, not %@.", [self class], NSStringFromSelector(_cmd)];
@@ -52,11 +50,11 @@
     return [[self currentDateWrapper] timeUntilDate:date];
 }
 
-- (void)scheduleOnDate:(NSDate *)theDate
+- (void)do:(TimerWidgetVoidBlock)theBlock onDate:(NSDate *)theDate;
 {
     if ([[self currentDate] earlierDate:theDate] == [self currentDate]) {
-        if ([self block]) {
-            [self block]();
+        if (theBlock) {
+            theBlock();
         }
     }else{
         // do nothing - time is frozen, so it will never fire

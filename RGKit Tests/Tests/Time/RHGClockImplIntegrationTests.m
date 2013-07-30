@@ -26,25 +26,6 @@
     clock = [[RHGClockImpl alloc] init];
 }
 
-- (void)testFires
-{
-    __block BOOL fired = NO;
-    
-    [clock setBlock:^{
-        fired = YES;
-    }];
-    
-    NSDate *oneHundredMillisecondsFromNow = [NSDate dateWithTimeIntervalSinceNow:0.1];
-    [clock scheduleOnDate:oneHundredMillisecondsFromNow];
-    
-    STAssertFalse(fired, nil);
-    
-    NSDate *twoHundredMillisecondsFromNow = [NSDate dateWithTimeIntervalSinceNow:0.2];
-    [[NSRunLoop currentRunLoop] runUntilDate:twoHundredMillisecondsFromNow];
-    
-    STAssertTrue(fired, nil);
-}
-
 - (void)testReturnsCurrentDate
 {
     NSTimeInterval delta = [[clock currentDate] timeIntervalSinceDate:[NSDate date]];

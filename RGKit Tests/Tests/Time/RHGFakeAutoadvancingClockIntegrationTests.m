@@ -28,11 +28,9 @@
 - (void)testBlockCalledIfTimeAlreadyPassed
 {
     __block BOOL blockCalled = NO;
-    clock.block = ^{
+    [clock do:^{
         blockCalled = YES;
-    };
-    
-    [clock scheduleOnDate:[NSDate dateWithTimeIntervalSince1970:0]];
+    } onDate:[NSDate dateWithTimeIntervalSince1970:0]];
 
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
     STAssertTrue(blockCalled, nil);
@@ -41,14 +39,14 @@
 - (void)testBlockCalledWhenScheduledDateArrives
 {
     __block BOOL blockCalled = NO;
-    clock.block = ^{
+    [clock do:^{
         blockCalled = YES;
-    };
+    } onDate:[NSDate dateWithTimeIntervalSince1970:1.0]];
     
-    [clock scheduleOnDate:[NSDate dateWithTimeIntervalSince1970:1.0]];
     STAssertFalse(blockCalled, nil);
     
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1.1]];
+    
     STAssertTrue(blockCalled, nil);
 }
 

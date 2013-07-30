@@ -16,3 +16,7 @@
 - (id)initWithCurrentDateWrapper:(id <RHGCurrentDateWrapper>)theCurrentDateWrapper;
 
 @end
+
+
+
+extern NSString * RHGBlockCallSchedulerBlockNotSetException;

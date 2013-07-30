@@ -21,8 +21,6 @@
 
 @implementation RHGClockImpl
 
-@dynamic block;
-
 - (id)init;
 {
     self = [super init];
@@ -44,19 +42,9 @@
     return [[self currentDateWrapper] dateForNextOccurenceOfHour:hour];
 }
 
-- (void)scheduleOnDate:(NSDate *)theDate
+- (void)do:(TimerWidgetVoidBlock)theBlock onDate:(NSDate *)theDate
 {
-    [[self blockCallScheduler] scheduleOnDate:theDate];
-}
-
-- (void)setBlock:(TimerWidgetVoidBlock)block
-{
-    [[self blockCallScheduler] setBlock:block];
-}
-
-- (TimerWidgetVoidBlock)block
-{
-    return [[self blockCallScheduler] block];
+    [_blockCallScheduler do:theBlock onDate:theDate];
 }
 
 - (NSTimeInterval)timeUntilDate:(NSDate *)date

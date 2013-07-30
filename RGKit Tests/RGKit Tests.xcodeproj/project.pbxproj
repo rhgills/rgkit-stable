@@ -19,6 +19,7 @@
 		4BAFFF8D177B6ACE0098341C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A591770F56700D38CCD /* CoreGraphics.framework */; };
 		4BAFFF93177B6F420098341C /* RHGClockImplIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF92177B6F420098341C /* RHGClockImplIntegrationTests.m */; };
 		4BAFFF97177B70340098341C /* RHGAutoverifyingSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */; };
+		4BE1F66617A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1F66517A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m */; };
 		4BE98C8E177CFA70005CD68C /* RHGFakeCurrentDateWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE98C8D177CFA70005CD68C /* RHGFakeCurrentDateWrapperTests.m */; };
 		D7C861F3E99B419BA0D2625E /* libPods-iOS Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96123473966E441EA07B2E21 /* libPods-iOS Tests.a */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		4BAFFF92177B6F420098341C /* RHGClockImplIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGClockImplIntegrationTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4BAFFF95177B70340098341C /* RHGAutoverifyingSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHGAutoverifyingSenTestCase.h; sourceTree = "<group>"; };
 		4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGAutoverifyingSenTestCase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4BE1F66517A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGBlockCallSchedulerTimerImplTests.m; sourceTree = "<group>"; };
 		4BE98C8D177CFA70005CD68C /* RHGFakeCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGFakeCurrentDateWrapperTests.m; sourceTree = "<group>"; };
 		96123473966E441EA07B2E21 /* libPods-iOS Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7A9CD4ED724777B9442E06 /* Pods-iOS Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Tests.xcconfig"; path = "Pods/Pods-iOS Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				4B5E090D177C8D8F0073D4E1 /* RHGBlockCallSchedulerTimerImplIntegrationTests.m */,
+				4BE1F66517A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m */,
 			);
 			path = "Block Call Scheduler";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				4B5E091D177CA9010073D4E1 /* RHGTimerWrapperTests.m in Sources */,
 				4B5E0920177CAA210073D4E1 /* RHGNSDateCurrentDateWrapperIntegrationTests.m in Sources */,
 				4BE98C8E177CFA70005CD68C /* RHGFakeCurrentDateWrapperTests.m in Sources */,
+				4BE1F66617A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

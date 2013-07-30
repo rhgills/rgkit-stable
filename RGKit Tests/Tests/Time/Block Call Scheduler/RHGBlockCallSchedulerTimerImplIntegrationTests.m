@@ -19,50 +19,37 @@
 
 @implementation RHGBlockCallSchedulerTimerImplIntegrationTests {
     RHGBlockCallSchedulerTimerImpl *scheduler;
+    
+    NSDate *scheduledDate;
 }
 
-// integration w/ NSDateCurrentDateWrapper
-- (void)testFires
+- (void)setUp
 {
-    __block BOOL fired = NO;
+    [super setUp];
     
     id <RHGCurrentDateWrapper> currentDateWrapper = [[RHGNSDateCurrentDateWrapper alloc] init];
     scheduler = [[RHGBlockCallSchedulerTimerImpl alloc] initWithCurrentDateWrapper:currentDateWrapper];
-    [scheduler setBlock:^{
-        fired = YES;
-    }];
     
-    NSDate *oneHundredMillisecondsFromNow = [NSDate dateWithTimeIntervalSinceNow:0.1];
-    [scheduler scheduleOnDate:oneHundredMillisecondsFromNow];
+    scheduledDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
+}
+
+- (void)testFires
+{
+    __block BOOL fired = NO;
+    [scheduler do:^{
+        fired = YES;
+    } onDate:scheduledDate];
     
     STAssertFalse(fired, nil);
     
-    NSDate *twoHundredMillisecondsFromNow = [NSDate dateWithTimeIntervalSinceNow:0.2];
-    [[NSRunLoop currentRunLoop] runUntilDate:twoHundredMillisecondsFromNow];
+    [self advanceTimeUntil:scheduledDate];
     
     STAssertTrue(fired, nil);
 }
 
-- (void)testFiresMockBetterIsolatedDate
+- (void)advanceTimeUntil:(NSDate *)date
 {
-    __block BOOL fired = NO;
-    
-    id currentDateWrapper = [self autoVerifiedMockForProtocol:@protocol(RHGCurrentDateWrapper)];
-    
-    scheduler = [[RHGBlockCallSchedulerTimerImpl alloc] initWithCurrentDateWrapper:currentDateWrapper];
-    [scheduler setBlock:^{
-        fired = YES;
-    }];
-    
-    NSDate *twoSecondsFromNow = [NSDate dateWithTimeIntervalSince1970:2.0];
-    [[currentDateWrapper expect] callback:scheduler onDate:twoSecondsFromNow];
-    [scheduler scheduleOnDate:twoSecondsFromNow];
-    
-    STAssertFalse(fired, nil);
-    
-    [scheduler dateReached:twoSecondsFromNow];
-    
-    STAssertTrue(fired, nil);
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeInterval:0.1 sinceDate:date]];
 }
 
 @end

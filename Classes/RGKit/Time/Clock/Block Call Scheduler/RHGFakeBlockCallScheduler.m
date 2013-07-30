@@ -13,8 +13,9 @@
 @synthesize block = _block;
 @synthesize scheduledDate = _scheduledDate;
 
-- (void)scheduleOnDate:(NSDate *)theDate
+- (void)do:(TimerWidgetVoidBlock)theBlock onDate:(NSDate *)theDate
 {
+    _block = theBlock;
     _scheduledDate = theDate;
 }
 

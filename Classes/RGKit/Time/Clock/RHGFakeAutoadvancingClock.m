@@ -21,8 +21,6 @@
 
 @implementation RHGFakeAutoadvancingClock
 
-@dynamic block;
-
 - (id)init
 {
     [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init, not %@.", [self class], NSStringFromSelector(_cmd)];
@@ -55,19 +53,9 @@
     return [[self currentDateWrapper] timeUntilDate:date];
 }
 
-- (void)scheduleOnDate:(NSDate *)theDate
+- (void)do:(TimerWidgetVoidBlock)theBlock onDate:(NSDate *)theDate;
 {
-    [[self blockCallScheduler] scheduleOnDate:theDate];
-}
-
-- (void)setBlock:(TimerWidgetVoidBlock)theBlock
-{
-    [[self blockCallScheduler] setBlock:theBlock];
-}
-
-- (TimerWidgetVoidBlock)block
-{
-    return [[self blockCallScheduler] block];
+    [_blockCallScheduler do:theBlock onDate:theDate];
 }
 
 - (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate

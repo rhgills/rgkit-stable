@@ -16,9 +16,6 @@ typedef void(^TimerWidgetVoidBlock)();
 
 @protocol RHGBlockCallScheduler <NSObject>
 
-- (void)scheduleOnDate:(NSDate *)theDate;
-
-- (void)setBlock:(TimerWidgetVoidBlock)theBlock;
-@property (copy) TimerWidgetVoidBlock block;
+- (void)do:(TimerWidgetVoidBlock)theBlock onDate:(NSDate *)theDate;
 
 @end

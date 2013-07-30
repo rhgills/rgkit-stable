@@ -14,6 +14,7 @@
 
 // fake
 @property (readonly) NSDate *scheduledDate;
+@property (readonly) TimerWidgetVoidBlock block;
 
 @end
 

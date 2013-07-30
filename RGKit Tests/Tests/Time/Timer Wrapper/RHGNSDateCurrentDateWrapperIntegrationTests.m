@@ -68,7 +68,7 @@
 
 - (void)advanceTimeUntil:(NSDate *)date
 {
-    [[NSRunLoop currentRunLoop] runUntilDate:date];
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeInterval:0.1 sinceDate:date]];
 }
 
 - (void)spinTheRunloop
@@ -89,6 +89,7 @@
     [self advanceTimeUntil:futureDate];
 }
 
+// this flickers
 - (void)testDelegatesNotNotifiedTwice
 {
     id d1 = [self newDelegateExpectingCallbackOnFutureDate];
