@@ -1,3 +1,4 @@
+desc "push out a tagged release to cocoapods"
 task :release, [:version] do |t, args|
   version = args.version
 

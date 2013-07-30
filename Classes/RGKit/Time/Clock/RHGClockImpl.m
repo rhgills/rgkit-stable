@@ -12,49 +12,39 @@
 #import "RHGNSDateCurrentDateWrapper.h"
 
 
-@interface RHGClockImpl ()
 
-@property (readonly) RHGBlockCallSchedulerTimerImpl *blockCallScheduler;
-
-
-@end
-
-@implementation RHGClockImpl
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wprotocol"
+@implementation RHGClockImpl {
+    id <RHGBlockCallScheduler> blockCallScheduler;
+}
+#pragma clang diagnostic pop
 
 - (id)init;
+{
+    return [self initWithCurrentDateWrapper:[[RHGNSDateCurrentDateWrapper alloc] init] scheduler:[[RHGBlockCallSchedulerTimerImpl alloc] initWithCurrentDateWrapper:_currentDateWrapper]];
+}
+
+- (id)initWithCurrentDateWrapper:(id <RHGCurrentDateWrapper>)theWrapper scheduler:(id <RHGBlockCallScheduler>)theScheduler;
 {
     self = [super init];
     if (!self) return nil;
     
-    _currentDateWrapper = [[RHGNSDateCurrentDateWrapper alloc] init];
-    _blockCallScheduler = [[RHGBlockCallSchedulerTimerImpl alloc] initWithCurrentDateWrapper:_currentDateWrapper];
+    _currentDateWrapper = theWrapper;
+    blockCallScheduler = theScheduler;
     
     return self;
 }
 
-- (NSDate *)currentDate
+- (id)forwardingTargetForSelector:(SEL)aSelector
 {
-    return [[self currentDateWrapper] currentDate];
-}
-
-- (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour
-{
-    return [[self currentDateWrapper] dateForNextOccurenceOfHour:hour];
-}
-
-- (void)do:(TimerWidgetVoidBlock)theBlock onDate:(NSDate *)theDate
-{
-    [_blockCallScheduler do:theBlock onDate:theDate];
-}
-
-- (NSTimeInterval)timeUntilDate:(NSDate *)date
-{
-    return [[self currentDateWrapper] timeUntilDate:date];
-}
-
-- (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate
-{
-    [[self currentDateWrapper] callback:delegate onDate:theDate];
+    if ([_currentDateWrapper respondsToSelector:aSelector])
+        return _currentDateWrapper;
+    else if ([blockCallScheduler respondsToSelector:aSelector])
+        return blockCallScheduler;
+    
+    return nil;
 }
 
 @end
+

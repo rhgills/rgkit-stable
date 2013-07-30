@@ -14,7 +14,8 @@
 @interface RHGClockImpl : NSObject <RHGClock>
 
 - (id)init;
+- (id)initWithCurrentDateWrapper:(id <RHGCurrentDateWrapper>)theWrapper scheduler:(id <RHGBlockCallScheduler>)theScheduler;
 
-@property (readonly) RHGNSDateCurrentDateWrapper *currentDateWrapper;
+@property (readonly) id <RHGCurrentDateWrapper> currentDateWrapper;
 
 @end
