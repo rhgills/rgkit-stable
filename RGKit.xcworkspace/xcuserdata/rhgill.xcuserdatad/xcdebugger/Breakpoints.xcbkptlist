@@ -14,5 +14,18 @@
          startingLineNumber = "21"
          endingLineNumber = "21">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "RGKit Tests/Helpers/RHGAutoverifyingSenTestCase.m"
+         timestampString = "396988359.258039"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "14"
+         endingLineNumber = "14"
+         landmarkName = "@interface RHGAutoverifyingSenTestCase()"
+         landmarkType = "2">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
