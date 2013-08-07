@@ -6,8 +6,9 @@ task :release, [:version] do |t, args|
   sh "pod spec lint #{podspec} --quick"
   sh %Q|git commit #{podspec} -m "Release #{version}"|
   sh "git tag #{version}"
+  sh "git push"
   sh "git push --tags"
-  sh "pod push rhgills"
+  sh "pod push rhgills-private"
 end
 
 def podspec
