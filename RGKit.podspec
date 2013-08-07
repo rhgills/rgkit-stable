@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RGKit"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Miscellaneous helpers."
   s.homepage     = "https://github.com/rhgills/rgkit-stable"
   s.license      = 'MIT'

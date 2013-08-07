@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-iOS Tests-CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-iOS Tests-OCHamcrest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-iOS Tests-OCMock.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-iOS Tests-RGKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods-iOS Tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,12 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>10A489E82A9E49B4B66A4283</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>11842978AC404C74B4DC66FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>15ECFE32A8414C4D950F2D93</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1850B503898C40459EFD3E71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,6 +97,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9C8BB4D964CD41F4B6B5E09F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9FDAB368EF3546A0B631F81E</key>
 		<dict>
 			<key>primary</key>
@@ -112,6 +147,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>CE20E6C5035D440399A9072A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D21297AB61404562A4B928A4</key>
 		<dict>
 			<key>primary</key>
@@ -133,6 +173,11 @@
 			<true/>
 		</dict>
 		<key>DBEEE805B68849A5B5FEE5B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0EA4546A5B04761A1BF47A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
