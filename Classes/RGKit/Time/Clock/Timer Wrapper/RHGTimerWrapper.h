@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RHGTimerWrapperDelegate.h>
+#import "RHGTimerWrapperDelegate.h"
 
 @protocol RHGTimerWrapper <NSObject>
 
