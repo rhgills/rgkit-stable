@@ -6,5 +6,5 @@
 //  Copyright (c) 2013 Robert Gilliam. All rights reserved.
 //
 
-#import "XQueryComponents/NSURL+RHGXQueryComponents.h"
-#import "XQueryComponents/NSString+RHGXQueryComponents.h"
+#import "NSURL+RHGXQueryComponents.h"
+#import "NSString+RHGXQueryComponents.h"

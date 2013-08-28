@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RGKit"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "Miscellaneous helpers."
   s.homepage     = "https://github.com/rhgills/rgkit-stable"
   s.license      = 'MIT'
@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes', 'Classes/**/*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
-  s.header_mappings_dir = 'Classes'
 
   s.requires_arc = true
 

@@ -1,5 +1,5 @@
 #include "Pods-iOS Tests-OCMock.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/OCMock" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaLumberjack" "${PODS_ROOT}/Headers/OCHamcrest" "${PODS_ROOT}/Headers/OCMock" "${PODS_ROOT}/Headers/RGKit" "${PODS_ROOT}/Headers/RGKit/RGKit" "${PODS_ROOT}/Headers/RGKit/RGKit/Time/Clock" "${PODS_ROOT}/Headers/RGKit/RGKit/Time/Clock/Block Call Scheduler" "${PODS_ROOT}/Headers/RGKit/RGKit/Time/Clock/Current Date Wrapper" "${PODS_ROOT}/Headers/RGKit/RGKit/Time/Clock/Timer Wrapper" "${PODS_ROOT}/Headers/RGKit/RGKit/XQueryComponents"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/OCMock" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaLumberjack" "${PODS_ROOT}/Headers/OCHamcrest" "${PODS_ROOT}/Headers/OCMock" "${PODS_ROOT}/Headers/RGKit"
 OTHER_LDFLAGS = -ObjC
 PODS_ROOT = ${SRCROOT}
