@@ -13,4 +13,6 @@
 
 - (id)initWithFrozenDate:(NSDate *)theDate;
 
+@property () NSDate *frozenDate;
+
 @end

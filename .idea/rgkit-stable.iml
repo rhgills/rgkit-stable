@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CIDR_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/.idea">
+      <sourceFolder url="file://$MODULE_DIR$/.idea" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSRunLoop+RunUntilSignal.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSRunLoop+RunUntilSignal.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSRunLoop+RunUntilSignal.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSRunLoop+RunUntilSignal.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSString+RHGPrefixAdditions.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSString+RHGPrefixAdditions.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSString+RHGPrefixAdditions.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSString+RHGPrefixAdditions.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSURL+RHGExampleURL.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSURL+RHGExampleURL.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSURL+RHGExampleURL.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSURL+RHGExampleURL.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSURLRequest+RHGExampleRequest.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSURLRequest+RHGExampleRequest.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/NSURLRequest+RHGExampleRequest.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/NSURLRequest+RHGExampleRequest.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGAbstractBuilder.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGAbstractBuilder.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGAbstractBuilder.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGAbstractBuilder.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGAbstractBuilderSubclassesOnly.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGAbstractBuilderSubclassesOnly.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGHelperMacros.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGHelperMacros.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGHelperMacros.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGHelperMacros.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGPerformDelayedSelectorWrapper.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGPerformDelayedSelectorWrapper.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGPerformDelayedSelectorWrapper.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGPerformDelayedSelectorWrapper.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGTime.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGTime.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGUnitTestHelpers.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGUnitTestHelpers.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/RHGXQueryComponents.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/RHGXQueryComponents.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallScheduler.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallScheduler.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallSchedulerTimerImpl.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallSchedulerTimerImpl.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallSchedulerTimerImpl.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallSchedulerTimerImpl.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGFakeBlockCallScheduler.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGFakeBlockCallScheduler.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGFakeBlockCallScheduler.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGFakeBlockCallScheduler.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGCurrentDateWrapper.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGCurrentDateWrapper.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeAutoadvancingCurrentDateWrapper.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeAutoadvancingCurrentDateWrapper.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeAutoadvancingCurrentDateWrapper.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeAutoadvancingCurrentDateWrapper.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGNSDateCurrentDateWrapper.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGNSDateCurrentDateWrapper.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGNSDateCurrentDateWrapper.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGNSDateCurrentDateWrapper.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGClock.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGClock.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGClockImpl.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGClockImpl.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGClockImpl.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGClockImpl.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeAutoadvancingClock.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeAutoadvancingClock.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeAutoadvancingClock.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeAutoadvancingClock.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapper.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapper.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperDelegate.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperDelegate.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperNS.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperNS.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperNS.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperNS.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSString+RHGXQueryComponents.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSString+RHGXQueryComponents.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSString+RHGXQueryComponents.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSString+RHGXQueryComponents.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSURL+RHGXQueryComponents.h">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSURL+RHGXQueryComponents.h" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSURL+RHGXQueryComponents.m">
+      <sourceFolder url="file://$MODULE_DIR$/Classes/RGKit/XQueryComponents/NSURL+RHGXQueryComponents.m" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/RGKit Tests">
+      <sourceFolder url="file://$MODULE_DIR$/RGKit Tests" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/RGKit.xcworkspace">
+      <sourceFolder url="file://$MODULE_DIR$/RGKit.xcworkspace" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+

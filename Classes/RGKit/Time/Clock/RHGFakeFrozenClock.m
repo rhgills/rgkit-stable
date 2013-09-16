@@ -19,6 +19,8 @@
 
 @implementation RHGFakeFrozenClock
 
+@dynamic frozenDate;
+
 - (id)init
 {
     [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init, not %@.", [self class], NSStringFromSelector(_cmd)];
@@ -64,6 +66,16 @@
 - (void)callback:(id<RHGTimerWrapperDelegate>)delegate onDate:(NSDate *)theDate
 {
     [[self currentDateWrapper] callback:delegate onDate:theDate];
+}
+
+- (void)setFrozenDate:(NSDate *)frozenDate;
+{
+    [[self currentDateWrapper] setFrozenDate:frozenDate];
+}
+
+- (NSDate *)frozenDate;
+{
+    [[self currentDateWrapper] frozenDate];
 }
 
 @end
