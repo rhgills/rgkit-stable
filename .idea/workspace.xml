@@ -2,21 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/RGKit/RHGHelperMacros.h" afterPath="$PROJECT_DIR$/Classes/RGKit/RHGHelperMacros.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RGKit Tests/Tests/Time/RHGFakeFrozenClockTests.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RGKit Tests/Tests/Time/RHGFakeFrozenClockTests.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m" afterPath="$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RGKit Tests/RGKit Tests.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/RGKit Tests/RGKit Tests.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rgkit-stable.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372983242" ignored="false" />
+    <file path="/Dummy.txt" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445762369" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-RXCollections-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-OHHTTPStubs-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-OHHTTPStubs-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-FLKAutoLayout-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Reachability-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Reachability-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-CocoaLumberjack-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-OCHamcrest-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-AFKissXMLRequestOperation-rhgills-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RXCollections-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RXCollections-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-JRSwizzle-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-KissXML-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-KissXML-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-DCIntrospect-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-DCIntrospect-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-AFNetworking-rhgills-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
@@ -24,22 +28,22 @@
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-acknowledgements.markdown" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372246750" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-Typhoon-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-CocoaLumberjack-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Typhoon-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Typhoon-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-KissXML-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Typhoon-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Typhoon-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-CocoaLumberjack-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-KissXML-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-JRSwizzle-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-RGKit-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-DCIntrospect-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-DCIntrospect-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-RXCollections-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Reachability-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Reachability-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-AFNetworking-rhgills-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-KissXML-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-KissXML-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-Reachability-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-RGKit-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-KissXML-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-RGKit-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
@@ -48,34 +52,34 @@
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-AFKissXMLRequestOperation-rhgills-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-AFKissXMLRequestOperation-rhgills-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-RXCollections-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-environment.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-environment.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-AFKissXMLRequestOperation-rhgills-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-Reachability-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-OHHTTPStubs-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-FLKAutoLayout-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-FLKAutoLayout-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-Typhoon-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-DCIntrospect-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RGKit-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RGKit-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-acknowledgements.markdown" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372246750" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RXCollections-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RXCollections-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-acknowledgements.markdown" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372246750" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-FLKAutoLayout-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-CocoaLumberjack-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-AFKissXMLRequestOperation-rhgills-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-AFNetworking-rhgills-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-OHHTTPStubs-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RGKit-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-OHHTTPStubs-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-RGKit-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-CocoaLumberjack-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-DCIntrospect-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-FLKAutoLayout-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-FLKAutoLayout-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-CocoaLumberjack-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Typhoon-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Typhoon-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-AFNetworking-rhgills-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-KissXML-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-environment.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-environment.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-FLKAutoLayout-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-environment.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-environment.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-RXCollections-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Reachability-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-OCHamcrest-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
@@ -84,11 +88,11 @@
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-OCMock-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-RGKit-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-OHHTTPStubs-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
-    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Typhoon-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442751245" ignored="false" />
+    <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-The Queue (Frank Acceptance Tests)-Typhoon-dummy.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445286895" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods-TheQueueLib-Tests-FLKAutoLayout-prefix.pch" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725651" ignored="false" />
     <file path="/fragment.mm" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379371773402" ignored="false" />
     <file path="/RHGFakeFrozenClock.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372084632" ignored="false" />
-    <file path="/RHGFakeFrozenClock.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372115317" ignored="false" />
+    <file path="/RHGFakeFrozenClock.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379446068525" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/The Queue Lib Tests/Tests/Queue Operation Results/RHGMinimumIntervalMessageDisplayerTests.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379436271736" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/Headers/RGKit/RHGFakeFrozenClock.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372202236" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/BuildHeaders/RGKit/RHGFakeFrozenClock.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372202236" ignored="false" />
@@ -134,7 +138,7 @@
     <file path="$PROJECT_DIR$/../phoenix/Pods/Pods.xcodeproj/xcshareddata/xcschemes/Pods-TheQueueLib-DCIntrospect.xcscheme" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379372417444" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/The Queue Lib/Classes/Queue Operation Results/RHGMinimumIntervalMessageDisplayer.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379436271736" ignored="false" />
     <file path="/RHGMinimumIntervalMessageDisplayer.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379374178132" ignored="false" />
-    <file path="/fragment.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442078623" ignored="false" />
+    <file path="/fragment.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445774290" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/The Queue Lib/Classes/DI/RHGAssemblyBase+QueueOperationResults.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379373270024" ignored="false" />
     <file path="/RHGAssemblyBase+QueueOperationResults.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379373267422" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Customer Tests/Tests/ToolbarMessageDisplayTests.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379436332079" ignored="false" />
@@ -208,6 +212,8 @@
     <file path="$PROJECT_DIR$/../phoenix/Pods/RGKit/Classes/RGKit/Time/Clock/RHGClock.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
     <file path="$PROJECT_DIR$/../phoenix/Pods/RGKit/Classes/RGKit/Time/Clock/Timer Wrapper/RHGTimerWrapperNS.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442725652" ignored="false" />
     <file path="/RHGHelperMacros.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379442817018" ignored="false" />
+    <file path="/RHGFakeFrozenClockTests.h" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445120896" ignored="false" />
+    <file path="/RHGFakeFrozenClockTests.m" changelist="07dfea55-dae8-4e38-91d0-8e39fe72d5f4" time="1379445987570" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,93 +233,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RHGFakeCurrentDateWrapper.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="30" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGHelperMacros.h" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/RHGHelperMacros.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.31744185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGFakeFrozenClock.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="1" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#85#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGFakeCurrentDateWrapperTests.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RGKit Tests/Tests/Time/Current Date Wrapper/RHGFakeCurrentDateWrapperTests.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="43" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGCurrentDateWrapper.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGCurrentDateWrapper.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGFakeBlockCallScheduler.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGFakeBlockCallScheduler.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGFakeBlockCallScheduler.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGFakeBlockCallScheduler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="30" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGBlockCallScheduler.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Block Call Scheduler/RHGBlockCallScheduler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RHGClock.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGClock.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="58" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RHGFakeFrozenClock.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.h">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="26" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RHGFakeFrozenClock.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="1" selection-start="1506" selection-end="1506" vertical-scroll-proportion="1.0906976">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RHGFakeFrozenClockTests.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RGKit Tests/Tests/Time/RHGFakeFrozenClockTests.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="23" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -338,8 +279,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.h" />
-        <option value="$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m" />
         <option value="$PROJECT_DIR$/Classes/RGKit/RHGHelperMacros.h" />
+        <option value="$PROJECT_DIR$/RGKit Tests/Tests/Time/RHGFakeFrozenClockTests.h" />
+        <option value="$PROJECT_DIR$/RGKit Tests/Tests/Time/RHGFakeFrozenClockTests.m" />
+        <option value="$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m" />
       </list>
     </option>
   </component>
@@ -530,6 +473,7 @@
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="iOS Tests" />
     <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RunManager" selected="OCUnit.iOS Tests">
@@ -589,23 +533,23 @@
     <frame x="0" y="22" width="2560" height="1418" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24990146" sideWeight="0.6706949" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -669,6 +613,27 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="1" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/RGKit/RHGHelperMacros.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="30" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGClock.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="58" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
@@ -711,6 +676,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="30" selection-start="379" selection-end="379" vertical-scroll-proportion="0.16024654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/RGKit/RHGHelperMacros.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="71" selection-start="116" selection-end="116" vertical-scroll-proportion="0.030046225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="26" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
@@ -718,25 +697,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/Current Date Wrapper/RHGFakeCurrentDateWrapper.h">
+    <entry file="file://$PROJECT_DIR$/RGKit Tests/Tests/Time/RHGFakeFrozenClockTests.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+        <state line="11" column="49" selection-start="266" selection-end="266" vertical-scroll-proportion="0.11016949">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/RGKit/RHGAbstractBuilderSubclassesOnly.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="172" selection-end="172" vertical-scroll-proportion="0.090697676">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RGKit Tests/Tests/Time/RHGFakeFrozenClockTests.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="23" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/RGKit/Time/Clock/RHGFakeFrozenClock.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="1" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#85#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/RGKit/RHGHelperMacros.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.31744185">
+        <state line="75" column="1" selection-start="1506" selection-end="1506" vertical-scroll-proportion="1.0906976">
           <folding />
         </state>
       </provider>

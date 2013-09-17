@@ -17,14 +17,16 @@
 
 
 
-@implementation RHGFakeFrozenClock
+@implementation RHGFakeFrozenClock {
+    TimerWidgetVoidBlock block;
+    NSDate *scheduledDate;
+}
 
 @dynamic frozenDate;
 
 - (id)init
 {
-    [NSException raise:NSInternalInconsistencyException format:@"%@: use the designated init, not %@.", [self class], NSStringFromSelector(_cmd)];
-    return nil;
+    return [self initWithFrozenDate:[NSDate dateWithTimeIntervalSince1970:0.0]];
 }
 
 - (id)initWithFrozenDate:(NSDate *)theDate;
@@ -54,12 +56,17 @@
 
 - (void)do:(TimerWidgetVoidBlock)theBlock onDate:(NSDate *)theDate;
 {
-    if ([[self currentDate] earlierDate:theDate] == [self currentDate]) {
-        if (theBlock) {
-            theBlock();
-        }
-    }else{
-        // do nothing - time is frozen, so it will never fire
+    scheduledDate = theDate;
+    block = theBlock;
+
+    [self callBlockIfScheduledDatePassed];
+}
+
+- (void)callBlockIfScheduledDatePassed;
+{
+    NSDate *now = [self currentDate];
+    if (block && [now laterDate:scheduledDate] == now) {
+        block();
     }
 }
 
@@ -71,6 +78,8 @@
 - (void)setFrozenDate:(NSDate *)frozenDate;
 {
     [[self currentDateWrapper] setFrozenDate:frozenDate];
+
+    [self callBlockIfScheduledDatePassed];
 }
 
 - (NSDate *)frozenDate;
