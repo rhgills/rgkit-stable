@@ -16,6 +16,8 @@ target 'iOS Tests' do
   # # :path => '/Users/rhgill/Code/LRMocky'
   pod 'OCHamcrest'
   # pod 'OHHTTPStubs'
+
+  link_with ['iOS Tests', 'iOS Integration Tests']
 end
 
 

@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'iOS Integration Tests' target in the 'iOS Integration Tests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#import <OCMock.h>
+
+#define HC_SHORTHAND
+#import <OCHamcrest.h>
+
+#import <RGKit.h>
+#import "RHGAutoverifyingSenTestCase.h"

@@ -15,6 +15,7 @@ flexible.
 
 OCHamcrest is used for both iOS or OS X development, and is compatible with:
 
+* XCTest
 * OCUnit (SenTestingKit)
 * Kiwi
 * Cedar
@@ -35,6 +36,13 @@ If you want to build OCHamcrest yourself, clone the repo, then
 $ git submodule update --init
 $ cd Source
 $ ./MakeDistribution.sh
+```
+
+If you have doxygen installed somewhere other than the Applications folder --
+in /usr/local/bin, for example -- use this as the build step:
+
+```sh
+$ DOXYGEN=/usr/local/bin/doxygen ./MakeDistribution.sh
 ```
 
 Or just use the pre-built release available at
@@ -157,7 +165,6 @@ OCHamcrest comes with a library of useful matchers:
 
   * ``contains`` - exactly match the entire collection
   * ``containsInAnyOrder`` - match the entire collection, but in any order
-  * ``empty`` - match empty collection
   * ``hasCount`` - match number of elements against another matcher
   * ``hasCountOf`` - match collection with given number of elements
   * ``hasEntries`` - match dictionary with list of key-value pairs
@@ -166,6 +173,7 @@ OCHamcrest comes with a library of useful matchers:
   * ``hasItems`` - match if all given items appear in the collection, in any order
   * ``hasKey`` - match dictionary with a key
   * ``hasValue`` - match dictionary with a value
+  * ``isEmpty`` - match empty collection
   * ``onlyContains`` - match if collection's items appear in given list
 
 * Decorator
@@ -229,8 +237,8 @@ Here's the interface:
     NSInteger day;      // Sunday is 0, Saturday is 6
 }
 
-+ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek;
-- (id)initWithDay:(NSInteger)dayOfWeek;
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek;
+- (instancetype)initWithDay:(NSInteger)dayOfWeek;
 
 @end
 
@@ -246,12 +254,12 @@ The interface consists of two parts: a class definition, and a factory function
 
 @implementation IsGivenDayOfWeek
 
-+ (id)isGivenDayOfWeek:(NSInteger)dayOfWeek
++ (instancetype)isGivenDayOfWeek:(NSInteger)dayOfWeek
 {
     return [[self alloc] initWithDay:dayOfWeek];
 }
 
-- (id)initWithDay:(NSInteger)dayOfWeek
+- (instancetype)initWithDay:(NSInteger)dayOfWeek
 {
     self = [super init];
     if (self)
