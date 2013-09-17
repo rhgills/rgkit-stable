@@ -75,7 +75,7 @@
 
 - (NSDate *)frozenDate;
 {
-    [[self currentDateWrapper] frozenDate];
+    return [[self currentDateWrapper] frozenDate];
 }
 
 @end
