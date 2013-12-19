@@ -55,6 +55,7 @@ static int ddLogLevel = LOG_LEVEL_WARN;
 - (NSDate *)dateForNextOccurenceOfHour:(NSInteger)hour
 {
     [NSException raise:NSInternalInconsistencyException format:@"%@: %@ is not yet implemented.", [self class], NSStringFromSelector(_cmd)];
+    return nil;
 }
 
 - (NSTimeInterval)timeUntilDate:(NSDate *)date

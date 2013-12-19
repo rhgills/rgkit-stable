@@ -63,6 +63,12 @@
             location = "group:RHGXQueryComponents.h">
          </FileRef>
          <FileRef
+            location = "group:NSArray+RHGEnumeration.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray+RHGEnumeration.m">
+         </FileRef>
+         <FileRef
             location = "group:RHGTime.h">
          </FileRef>
          <Group

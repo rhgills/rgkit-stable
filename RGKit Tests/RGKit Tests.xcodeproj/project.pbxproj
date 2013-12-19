@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B0C4A741770F56700D38CCD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A731770F56700D38CCD /* SenTestingKit.framework */; };
 		4B0C4A751770F56800D38CCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A551770F56700D38CCD /* UIKit.framework */; };
 		4B0C4A761770F56800D38CCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A571770F56700D38CCD /* Foundation.framework */; };
 		4B5E0918177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */; };
@@ -16,7 +15,6 @@
 		4BAFFF97177B70340098341C /* RHGAutoverifyingSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */; };
 		4BE1F66617A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1F66517A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m */; };
 		4BE98C8E177CFA70005CD68C /* RHGFakeCurrentDateWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE98C8D177CFA70005CD68C /* RHGFakeCurrentDateWrapperTests.m */; };
-		4BF12CBA17E8E5EB00628EC5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A731770F56700D38CCD /* SenTestingKit.framework */; };
 		4BF12CBB17E8E5EB00628EC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A551770F56700D38CCD /* UIKit.framework */; };
 		4BF12CBC17E8E5EB00628EC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A571770F56700D38CCD /* Foundation.framework */; };
 		4BF12CC217E8E5EB00628EC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BF12CC017E8E5EB00628EC5 /* InfoPlist.strings */; };
@@ -27,6 +25,8 @@
 		4BF12CD117E906BB00628EC5 /* RHGAutoverifyingSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFFF96177B70340098341C /* RHGAutoverifyingSenTestCase.m */; };
 		4BF12CD217E906BF00628EC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0C4A591770F56700D38CCD /* CoreGraphics.framework */; };
 		8D5B9AC056E3482BB78195C9 /* libPods-iOS Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96123473966E441EA07B2E21 /* libPods-iOS Tests.a */; };
+		AA5E587418628BAD0073EBB8 /* NSArray+RHGEnumerationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5E587318628BAD0073EBB8 /* NSArray+RHGEnumerationTests.m */; };
+		AA78DFC318628E4C00F6C278 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA78DFC218628E4C00F6C278 /* SenTestingKit.framework */; };
 		C872630268C6ECF46B228914 /* RHGBlockCallSchedulerTimerImplIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8726D9AB0DE5FD619D20D9D /* RHGBlockCallSchedulerTimerImplIntegrationTests.m */; };
 		C8726A6E95B1BD97BD1A7883 /* RHGFakeFrozenClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8726DECA0C521BFA209C986 /* RHGFakeFrozenClockTests.m */; };
 		D7C861F3E99B419BA0D2625E /* libPods-iOS Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96123473966E441EA07B2E21 /* libPods-iOS Tests.a */; };
@@ -37,7 +37,6 @@
 		4B0C4A571770F56700D38CCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B0C4A591770F56700D38CCD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4B0C4A721770F56700D38CCD /* iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B0C4A731770F56700D38CCD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4B4D62091770F5F5002AD2A0 /* RGKitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RGKitTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4B5E0917177C9A5D0073D4E1 /* RHGNSDateCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RHGNSDateCurrentDateWrapperTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4B5E0919177C9BE80073D4E1 /* RGKit Tests PCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "RGKit Tests PCH.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -53,6 +52,8 @@
 		4BF12CCD17E9063000628EC5 /* RHGFakeAutoadvancingClockIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGFakeAutoadvancingClockIntegrationTests.m; sourceTree = "<group>"; };
 		4BF12CCF17E9066700628EC5 /* RHGFakeAutoadvancingCurrentDateWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGFakeAutoadvancingCurrentDateWrapperTests.m; sourceTree = "<group>"; };
 		96123473966E441EA07B2E21 /* libPods-iOS Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5E587318628BAD0073EBB8 /* NSArray+RHGEnumerationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RHGEnumerationTests.m"; sourceTree = "<group>"; };
+		AA78DFC218628E4C00F6C278 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C87269369E24A63A49BCF62E /* RHGClockImplIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGClockImplIntegrationTests.m; sourceTree = "<group>"; };
 		C87269FC4EEBFBFC48FFC236 /* RHGNSDateCurrentDateWrapperIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGNSDateCurrentDateWrapperIntegrationTests.m; sourceTree = "<group>"; };
 		C8726D9AB0DE5FD619D20D9D /* RHGBlockCallSchedulerTimerImplIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHGBlockCallSchedulerTimerImplIntegrationTests.m; sourceTree = "<group>"; };
@@ -66,8 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA78DFC318628E4C00F6C278 /* SenTestingKit.framework in Frameworks */,
 				4BAFFF8D177B6ACE0098341C /* CoreGraphics.framework in Frameworks */,
-				4B0C4A741770F56700D38CCD /* SenTestingKit.framework in Frameworks */,
 				4B0C4A751770F56800D38CCD /* UIKit.framework in Frameworks */,
 				4B0C4A761770F56800D38CCD /* Foundation.framework in Frameworks */,
 				D7C861F3E99B419BA0D2625E /* libPods-iOS Tests.a in Frameworks */,
@@ -79,7 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF12CD217E906BF00628EC5 /* CoreGraphics.framework in Frameworks */,
-				4BF12CBA17E8E5EB00628EC5 /* SenTestingKit.framework in Frameworks */,
 				4BF12CBB17E8E5EB00628EC5 /* UIKit.framework in Frameworks */,
 				4BF12CBC17E8E5EB00628EC5 /* Foundation.framework in Frameworks */,
 				8D5B9AC056E3482BB78195C9 /* libPods-iOS Tests.a in Frameworks */,
@@ -114,10 +114,10 @@
 		4B0C4A541770F56700D38CCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA78DFC218628E4C00F6C278 /* SenTestingKit.framework */,
 				4B0C4A551770F56700D38CCD /* UIKit.framework */,
 				4B0C4A571770F56700D38CCD /* Foundation.framework */,
 				4B0C4A591770F56700D38CCD /* CoreGraphics.framework */,
-				4B0C4A731770F56700D38CCD /* SenTestingKit.framework */,
 				96123473966E441EA07B2E21 /* libPods-iOS Tests.a */,
 			);
 			name = Frameworks;
@@ -159,6 +159,7 @@
 		4BAFFF8F177B6F280098341C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AA5E587318628BAD0073EBB8 /* NSArray+RHGEnumerationTests.m */,
 				4BAFFF90177B6F280098341C /* Time */,
 			);
 			path = Tests;
@@ -238,7 +239,7 @@
 			name = "iOS Tests";
 			productName = "RGKit TestsTests";
 			productReference = 4B0C4A721770F56700D38CCD /* iOS Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4BF12CB817E8E5EB00628EC5 /* iOS Integration Tests */ = {
 			isa = PBXNativeTarget;
@@ -402,6 +403,7 @@
 				4B5E091D177CA9010073D4E1 /* RHGTimerWrapperTests.m in Sources */,
 				4BE98C8E177CFA70005CD68C /* RHGFakeCurrentDateWrapperTests.m in Sources */,
 				4BE1F66617A8198C006D9878 /* RHGBlockCallSchedulerTimerImplTests.m in Sources */,
+				AA5E587418628BAD0073EBB8 /* NSArray+RHGEnumerationTests.m in Sources */,
 				C8726A6E95B1BD97BD1A7883 /* RHGFakeFrozenClockTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

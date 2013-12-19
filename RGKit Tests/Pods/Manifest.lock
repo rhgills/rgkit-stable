@@ -1,23 +1,28 @@
 PODS:
-  - CocoaLumberjack (1.6.2)
+  - CocoaLumberjack (1.6.5.1):
+    - CocoaLumberjack/Core
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.6.5.1)
+  - CocoaLumberjack/Extensions (1.6.5.1):
+    - CocoaLumberjack/Core
   - OCHamcrest (3.0.0)
   - OCMock (2.1.1)
-  - RGKit (0.1.6):
+  - RHGKit (0.1.7):
     - CocoaLumberjack (~> 1.6.0)
 
 DEPENDENCIES:
   - OCHamcrest
   - OCMock (~> 2.1.1)
-  - RGKit (from `../`)
+  - RHGKit (from `../`)
 
 EXTERNAL SOURCES:
-  RGKit:
+  RHGKit:
     :path: ../
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: d73e1e317ced14ab930797dda6c17156ff17aaa1
+  CocoaLumberjack: 17803afbade3126a377d32b8d23367264b44ced6
   OCHamcrest: 739added27df87b26adb60ab5aa14b7e3cf58afe
   OCMock: 79212e5e328378af5cfd6edb5feacfd6c49cd8a3
-  RGKit: b219762157fd3ad3a5dee3620c832f76a7be9ee2
+  RHGKit: 37de9e875470caa411441cb455c3a1b1f05cfb7f
 
-COCOAPODS: 0.22.3
+COCOAPODS: 0.28.0

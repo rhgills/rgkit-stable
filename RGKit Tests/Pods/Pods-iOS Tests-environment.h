@@ -8,9 +8,24 @@
 
 // CocoaLumberjack
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
-#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
-#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 6
-#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 2
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.6.5.1.
+
+// CocoaLumberjack/Core
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Core
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.6.5.1.
+
+// CocoaLumberjack/Extensions
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Extensions
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.6.5.1.
 
 // OCHamcrest
 #define COCOAPODS_POD_AVAILABLE_OCHamcrest
@@ -24,9 +39,9 @@
 #define COCOAPODS_VERSION_MINOR_OCMock 1
 #define COCOAPODS_VERSION_PATCH_OCMock 1
 
-// RGKit
-#define COCOAPODS_POD_AVAILABLE_RGKit
-#define COCOAPODS_VERSION_MAJOR_RGKit 0
-#define COCOAPODS_VERSION_MINOR_RGKit 1
-#define COCOAPODS_VERSION_PATCH_RGKit 6
+// RHGKit
+#define COCOAPODS_POD_AVAILABLE_RHGKit
+#define COCOAPODS_VERSION_MAJOR_RHGKit 0
+#define COCOAPODS_VERSION_MINOR_RHGKit 1
+#define COCOAPODS_VERSION_PATCH_RHGKit 7
 
