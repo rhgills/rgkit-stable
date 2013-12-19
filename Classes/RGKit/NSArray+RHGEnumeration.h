@@ -11,6 +11,6 @@
 @interface NSArray (RHGEnumeration)
 
 typedef void(^RHGEachBlock)(id obj);
-- (void)each:(RHGEachBlock)block;
+- (void)rhg_each:(RHGEachBlock)block;
 
 @end

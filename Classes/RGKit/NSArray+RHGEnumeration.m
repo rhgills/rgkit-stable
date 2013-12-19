@@ -10,7 +10,7 @@
 
 @implementation NSArray (RHGEnumeration)
 
-- (void)each:(RHGEachBlock)block;
+- (void)rhg_each:(RHGEachBlock)block;
 {
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         block(obj);

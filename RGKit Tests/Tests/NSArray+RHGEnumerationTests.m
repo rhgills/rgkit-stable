@@ -31,7 +31,7 @@
 {
     NSArray *array = @[@"a", @"b"];
     NSMutableArray *calledWith = [NSMutableArray new];
-    [array each:^(id obj) {
+    [array rhg_each:^(id obj) {
         [calledWith addObject:obj];
     }];
     
