@@ -10,8 +10,6 @@
 #import <DDLog.h>
 #import <RHGHelperMacros.h>
 
-static int ddLogLevel = LOG_LEVEL_WARN;
-
 
 
 @interface RHGBlockCallSchedulerTimerImpl ()
